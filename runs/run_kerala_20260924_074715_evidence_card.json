@@ -1,0 +1,106 @@
+{
+  "run_id": "run_kerala_20260924_074715",
+  "manifest_sha256": "3955ca80de8a4a51423d654581ab83af25d72080ef7e3c6a6dc59d45c18f6b6a",
+  "attribution": {
+    "schema_version": "1.0",
+    "run_id": "run_kerala_20260924_074715",
+    "posteriors": {
+      "MSC ELSA 3": 0.0952,
+      "OCEAN PRIDE": 0.0002,
+      "DARK_sar_ship_001": 0.0006,
+      "DARK_sar_ship_002": 0.0006,
+      "DARK_sar_ship_003": 0.0006,
+      "DARK_sar_ship_004": 0.0006,
+      "DARK_sar_ship_005": 0.0006,
+      "DARK_sar_ship_006": 0.0006,
+      "DARK_sar_ship_007": 0.0006,
+      "DARK_sar_ship_008": 0.0006,
+      "U": 0.8996
+    },
+    "evidence_terms": {
+      "MSC ELSA 3": {
+        "drift_consistency": 0.65,
+        "slick_geometry": 0.75,
+        "head_proximity": 0.95,
+        "behaviour": 0.3
+      },
+      "OCEAN PRIDE": {
+        "drift_consistency": 0.02,
+        "slick_geometry": 0.75,
+        "head_proximity": 0.02,
+        "behaviour": 0.3
+      },
+      "DARK_sar_ship_001": {
+        "drift_consistency": 0.05,
+        "slick_geometry": 0.5,
+        "head_proximity": 0.05,
+        "behaviour": 0.3
+      },
+      "DARK_sar_ship_002": {
+        "drift_consistency": 0.05,
+        "slick_geometry": 0.5,
+        "head_proximity": 0.05,
+        "behaviour": 0.3
+      },
+      "DARK_sar_ship_003": {
+        "drift_consistency": 0.05,
+        "slick_geometry": 0.5,
+        "head_proximity": 0.05,
+        "behaviour": 0.3
+      },
+      "DARK_sar_ship_004": {
+        "drift_consistency": 0.05,
+        "slick_geometry": 0.5,
+        "head_proximity": 0.05,
+        "behaviour": 0.3
+      },
+      "DARK_sar_ship_005": {
+        "drift_consistency": 0.05,
+        "slick_geometry": 0.5,
+        "head_proximity": 0.05,
+        "behaviour": 0.3
+      },
+      "DARK_sar_ship_006": {
+        "drift_consistency": 0.05,
+        "slick_geometry": 0.5,
+        "head_proximity": 0.05,
+        "behaviour": 0.3
+      },
+      "DARK_sar_ship_007": {
+        "drift_consistency": 0.05,
+        "slick_geometry": 0.5,
+        "head_proximity": 0.05,
+        "behaviour": 0.3
+      },
+      "DARK_sar_ship_008": {
+        "drift_consistency": 0.05,
+        "slick_geometry": 0.5,
+        "head_proximity": 0.05,
+        "behaviour": 0.3
+      }
+    },
+    "grade": "None",
+    "exclusions": [
+      {
+        "vessel_id": "KERALA STAR",
+        "reason": "Track never entered backward reachability envelope (closest approach: 15.0 nm)"
+      },
+      {
+        "vessel_id": "MALABAR QUEEN",
+        "reason": "Track never entered backward reachability envelope (closest approach: 6.9 nm)"
+      }
+    ],
+    "headline": "Insufficient evidence"
+  },
+  "ais_status": "synthetic",
+  "generated_at_utc": "2026-09-24T07:47:15.707873Z",
+  "metadata": {
+    "scene_id": "S1A_IW_GRDH_1SDV_20250727T004109_20250727T004134_060262_077D37_F7F7",
+    "satellite": "Sentinel-1A",
+    "wind_class": "workable",
+    "wind_speed_mps": 5.8,
+    "slick_count": 1,
+    "ship_detection_count": 8,
+    "matched_vessels": 0
+  }
+}

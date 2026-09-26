@@ -1,0 +1,30 @@
+# SAGAR-SAKSHI Core Dependencies
+# Pinned versions compatible with Python 3.12 on Windows
+
+# Web API & Data Models
+fastapi>=0.115.0
+uvicorn>=0.30.0
+pydantic>=2.8.0
+
+# Scientific & Spatial Processing
+numpy>=1.26.0
+scipy>=1.13.0
+pandas>=2.2.0
+scikit-learn>=1.5.0
+shapely>=2.0.0
+pyproj>=3.6.0
+tifffile>=2024.5.0
+zarr>=2.16.0,<3.0
+rasterio>=1.4.3
+
+# YAML & Utility
+pyyaml>=6.0.1
+requests>=2.32.0
+
+# PDF Generation for Evidence Cards
+reportlab>=4.2.0
+
+# Testing
+pytest>=8.2.0
+# Required by recent Starlette TestClient releases used with FastAPI.
+httpx2>=2.13.0

@@ -1,0 +1,51 @@
+{
+  "run_id": "run_kerala_20260925_215235",
+  "manifest_sha256": "64a4142b3206f1d427346827ed86bcc2df2ead653f5d758d6852ef860affcdcf",
+  "attribution": {
+    "schema_version": "1.0",
+    "run_id": "run_kerala_20260925_215235",
+    "posteriors": {
+      "SYNTHETIC ENNORE DEMO CANDIDATE": 0.8707,
+      "U": 0.1293
+    },
+    "evidence_terms": {
+      "SYNTHETIC ENNORE DEMO CANDIDATE": {
+        "drift_consistency": 0.875,
+        "slick_geometry": 1.4,
+        "head_proximity": 1.0,
+        "behaviour": 1.0
+      }
+    },
+    "grade": "C",
+    "exclusions": [
+      {
+        "vessel_id": "SYNTHETIC BACKGROUND TANKER",
+        "reason": "Track never entered backward reachability envelope (closest approach: 18.5 nm)"
+      },
+      {
+        "vessel_id": "SYNTHETIC BACKGROUND CARRIER",
+        "reason": "Track never entered backward reachability envelope (closest approach: 13.6 nm)"
+      }
+    ],
+    "headline": "Vessels in the area"
+  },
+  "ais_status": "synthetic",
+  "generated_at_utc": "2026-09-25T21:52:37.107990Z",
+  "metadata": {
+    "incident_id": "ennore_2017_collision_spill",
+    "scene_id": "S1A_IW_GRDH_1SDV_20170129T003132_20170129T003157_015039_01892E_8B05_COG.SAFE",
+    "satellite": "Sentinel-1A",
+    "wind_class": "workable",
+    "wind_speed_mps": 4.5,
+    "slick_count": 1,
+    "ship_detection_count": 6,
+    "matched_vessels": 1,
+    "sar_source": "synthetic_demo_raster",
+    "sar_synthetic": true,
+    "forcing_source": "configured_constant_defaults",
+    "forcing_live_fetch": false,
+    "drift_engine": "custom_advection_approximation",
+    "probabilities_calibrated": false,
+    "manifest_file": "runs\\run_kerala_20260925_215235_manifest.json"
+  }
+}

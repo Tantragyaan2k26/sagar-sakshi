@@ -1,0 +1,62 @@
+{
+  "run_id": "run_kerala_20260925_220438",
+  "manifest_sha256": "d7342798d81cf9770de0dddcebcb40359f624be418bf921f3a73aef706a092df",
+  "attribution": {
+    "schema_version": "1.0",
+    "run_id": "run_kerala_20260925_220438",
+    "posteriors": {
+      "MSC ELSA 3": 0.8776,
+      "SYNTHETIC BACKGROUND CARRIER": 0.0028,
+      "U": 0.1196
+    },
+    "evidence_terms": {
+      "MSC ELSA 3": {
+        "drift_consistency": 0.875,
+        "slick_geometry": 1.4,
+        "head_proximity": 2.5,
+        "behaviour": 1.0
+      },
+      "SYNTHETIC BACKGROUND CARRIER": {
+        "drift_consistency": 0.05,
+        "slick_geometry": 1.4,
+        "head_proximity": 0.05,
+        "behaviour": 1.0
+      }
+    },
+    "grade": "C",
+    "exclusions": [
+      {
+        "vessel_id": "SYNTHETIC BACKGROUND TANKER",
+        "reason": "Track never entered backward reachability envelope (closest approach: 20.7 nm)"
+      }
+    ],
+    "headline": "Vessels in the area"
+  },
+  "ais_status": "synthetic",
+  "generated_at_utc": "2026-09-25T22:04:39.375447Z",
+  "metadata": {
+    "incident_id": "kerala_2025_msc_elsa_3",
+    "incident_name": "MSC ELSA 3 capsize, Kerala coast",
+    "incident_location": "14.6 nm off Thottappally, Alappuzha, Kerala",
+    "incident_time_utc": "2025-05-25T02:20:00Z",
+    "scene_id": "S1A_IW_GRDH_1SDV_20250528T004112_20250528T004137_059387_075F14_7F15_COG.SAFE",
+    "satellite": "Sentinel-1A",
+    "scene_acquisition_start_utc": "2025-05-28T00:41:12.668533Z",
+    "scene_product_status": "catalogue_footprint_covers_configured_aoi; full_product_not_downloaded",
+    "scene_orbit_direction": "ASCENDING",
+    "wind_class": "workable",
+    "wind_speed_mps": 5.8,
+    "slick_count": 1,
+    "ship_detection_count": 6,
+    "matched_vessels": 1,
+    "sar_source": "synthetic_demo_raster",
+    "sar_synthetic": true,
+    "forcing_source": "configured_constant_defaults",
+    "forcing_live_fetch": false,
+    "wind_source": "configured_constant_demo",
+    "current_source": "configured_constant_demo",
+    "drift_engine": "custom_advection_approximation",
+    "probabilities_calibrated": false,
+    "manifest_file": "runs\\run_kerala_20260925_220438_manifest.json"
+  }
+}

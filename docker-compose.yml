@@ -1,0 +1,50 @@
+services:
+  api:
+    build: .
+    container_name: sagar_sakshi_api
+    command: uvicorn api.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://sagar:sakshi_secret@postgis:5432/sagar_sakshi
+      - REDIS_URL=redis://redis:6379/0
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - .:/app
+    depends_on:
+      - postgis
+      - redis
+
+  worker:
+    build: .
+    container_name: sagar_sakshi_worker
+    command: python -m pipeline
+    environment:
+      - DATABASE_URL=postgresql://sagar:sakshi_secret@postgis:5432/sagar_sakshi
+      - REDIS_URL=redis://redis:6379/0
+    volumes:
+      - .:/app
+    depends_on:
+      - postgis
+      - redis
+
+  postgis:
+    image: postgis/postgis:16-3.4
+    container_name: sagar_sakshi_postgis
+    environment:
+      - POSTGRES_USER=sagar
+      - POSTGRES_PASSWORD=sakshi_secret
+      - POSTGRES_DB=sagar_sakshi
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgis_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    container_name: sagar_sakshi_redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgis_data:

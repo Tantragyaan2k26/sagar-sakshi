@@ -1,0 +1,49 @@
+incident:
+  incident_id: "ennore_2017_collision_spill"
+  name: "Ennore collision-related oil spill"
+  location_name: "Off Kamarajar Port (Ennore), Tamil Nadu"
+  approximate_time_utc: "2017-01-27T22:30:00Z"
+  source_hypothesis: "Collision involving BW Maple and Dawn Kanchipuram; individual source attribution is unresolved"
+  demo_reference_point:
+    lat: 13.260
+    lon: 80.330
+  aoi:
+    min_lon: 80.15
+    min_lat: 13.05
+    max_lon: 80.52
+    max_lat: 13.45
+
+scene:
+  satellite: "Sentinel-1A"
+  product_id: "S1A_IW_GRDH_1SDV_20170129T003132_20170129T003157_015039_01892E_8B05_COG.SAFE"
+  product_status: "catalogue_footprint_covers_configured_aoi; full_product_not_downloaded"
+  acquisition_start_utc: "2017-01-29T00:31:32.651Z"
+  acquisition_end_utc: "2017-01-29T00:31:57.648Z"
+  orbit_direction: "ASCENDING"
+  tiff_path: "data/02_processed_tiff/Ennore_Processed.tif"
+  raw_zip: "data/01_raw_zip/S1A_IW_GRDH_1SDV_20170129T003132_20170129T003157_015039_01892E_8B05_COG.SAFE.zip"
+
+ais:
+  source: "synthetic"
+  window_hours: 24
+  target_vessel_name: "SYNTHETIC ENNORE DEMO CANDIDATE"
+  target_mmsi: "SYN-ENNORE-LEAD-01"
+
+metocean:
+  current_source: "configured_constant_demo"
+  wind_source: "configured_constant_demo"
+  default_current_u_mps: 0.10
+  default_current_v_mps: 0.08
+  default_wind_speed_mps: 4.5
+  default_wind_from_deg: 90.0
+
+thresholds:
+  wind_too_low_mps: 3.0
+  wind_too_high_mps: 10.0
+  min_detectable_ship_length_m: 20.0
+  max_drift_window_hours: 24
+  hard_cap_drift_hours: 48
+  posterior_a_threshold: 0.70
+  posterior_b_threshold: 0.60
+  prior_unknown: 0.15
+  tempering_exponent: 0.85

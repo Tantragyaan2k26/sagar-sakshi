@@ -1,0 +1,106 @@
+{
+  "run_id": "run_kerala_20260924_074922",
+  "manifest_sha256": "a409a25f0ce0eb0a9a230dc6f35c61c5f4667b8bbcc35491ae3fe9d8831fe70d",
+  "attribution": {
+    "schema_version": "1.0",
+    "run_id": "run_kerala_20260924_074922",
+    "posteriors": {
+      "MSC ELSA 3": 0.8185,
+      "OCEAN PRIDE": 0.0008,
+      "DARK_sar_ship_001": 0.0019,
+      "DARK_sar_ship_002": 0.0019,
+      "DARK_sar_ship_003": 0.0019,
+      "DARK_sar_ship_004": 0.0019,
+      "DARK_sar_ship_005": 0.0019,
+      "DARK_sar_ship_006": 0.0019,
+      "DARK_sar_ship_007": 0.0019,
+      "DARK_sar_ship_008": 0.0019,
+      "U": 0.1657
+    },
+    "evidence_terms": {
+      "MSC ELSA 3": {
+        "drift_consistency": 1.825,
+        "slick_geometry": 1.4,
+        "head_proximity": 5.0,
+        "behaviour": 1.0
+      },
+      "OCEAN PRIDE": {
+        "drift_consistency": 0.05,
+        "slick_geometry": 1.4,
+        "head_proximity": 0.05,
+        "behaviour": 1.0
+      },
+      "DARK_sar_ship_001": {
+        "drift_consistency": 0.1,
+        "slick_geometry": 1.0,
+        "head_proximity": 0.1,
+        "behaviour": 1.0
+      },
+      "DARK_sar_ship_002": {
+        "drift_consistency": 0.1,
+        "slick_geometry": 1.0,
+        "head_proximity": 0.1,
+        "behaviour": 1.0
+      },
+      "DARK_sar_ship_003": {
+        "drift_consistency": 0.1,
+        "slick_geometry": 1.0,
+        "head_proximity": 0.1,
+        "behaviour": 1.0
+      },
+      "DARK_sar_ship_004": {
+        "drift_consistency": 0.1,
+        "slick_geometry": 1.0,
+        "head_proximity": 0.1,
+        "behaviour": 1.0
+      },
+      "DARK_sar_ship_005": {
+        "drift_consistency": 0.1,
+        "slick_geometry": 1.0,
+        "head_proximity": 0.1,
+        "behaviour": 1.0
+      },
+      "DARK_sar_ship_006": {
+        "drift_consistency": 0.1,
+        "slick_geometry": 1.0,
+        "head_proximity": 0.1,
+        "behaviour": 1.0
+      },
+      "DARK_sar_ship_007": {
+        "drift_consistency": 0.1,
+        "slick_geometry": 1.0,
+        "head_proximity": 0.1,
+        "behaviour": 1.0
+      },
+      "DARK_sar_ship_008": {
+        "drift_consistency": 0.1,
+        "slick_geometry": 1.0,
+        "head_proximity": 0.1,
+        "behaviour": 1.0
+      }
+    },
+    "grade": "A",
+    "exclusions": [
+      {
+        "vessel_id": "KERALA STAR",
+        "reason": "Track never entered backward reachability envelope (closest approach: 15.0 nm)"
+      },
+      {
+        "vessel_id": "MALABAR QUEEN",
+        "reason": "Track never entered backward reachability envelope (closest approach: 6.9 nm)"
+      }
+    ],
+    "headline": "Strong lead; consistent with discharge by MSC ELSA 3"
+  },
+  "ais_status": "synthetic",
+  "generated_at_utc": "2026-09-24T07:49:23.342142Z",
+  "metadata": {
+    "scene_id": "S1A_IW_GRDH_1SDV_20250727T004109_20250727T004134_060262_077D37_F7F7",
+    "satellite": "Sentinel-1A",
+    "wind_class": "workable",
+    "wind_speed_mps": 5.8,
+    "slick_count": 1,
+    "ship_detection_count": 8,
+    "matched_vessels": 0
+  }
+}

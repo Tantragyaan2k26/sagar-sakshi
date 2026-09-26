@@ -1,0 +1,54 @@
+{
+  "run_id": "quickstart_kerala_selection",
+  "manifest_sha256": "f9293fb023531f1b8e6d9ee62f41377727972909ca191059cf43235f863ba30c",
+  "attribution": {
+    "schema_version": "1.0",
+    "run_id": "quickstart_kerala_selection",
+    "posteriors": {
+      "MSC ELSA 3": 0.8776,
+      "SYNTHETIC BACKGROUND CARRIER": 0.0028,
+      "U": 0.1196
+    },
+    "evidence_terms": {
+      "MSC ELSA 3": {
+        "drift_consistency": 0.875,
+        "slick_geometry": 1.4,
+        "head_proximity": 2.5,
+        "behaviour": 1.0
+      },
+      "SYNTHETIC BACKGROUND CARRIER": {
+        "drift_consistency": 0.05,
+        "slick_geometry": 1.4,
+        "head_proximity": 0.05,
+        "behaviour": 1.0
+      }
+    },
+    "grade": "C",
+    "exclusions": [
+      {
+        "vessel_id": "SYNTHETIC BACKGROUND TANKER",
+        "reason": "Track never entered backward reachability envelope (closest approach: 20.7 nm)"
+      }
+    ],
+    "headline": "Vessels in the area"
+  },
+  "ais_status": "synthetic",
+  "generated_at_utc": "2026-09-25T21:30:43.638473Z",
+  "metadata": {
+    "incident_id": "kerala_2025_msc_elsa_3",
+    "scene_id": "S1A_IW_GRDH_1SDV_20250528T004112_20250528T004137_059387_075F14_7F15_COG.SAFE",
+    "satellite": "Sentinel-1A",
+    "wind_class": "workable",
+    "wind_speed_mps": 5.8,
+    "slick_count": 1,
+    "ship_detection_count": 6,
+    "matched_vessels": 1,
+    "sar_source": "synthetic_demo_raster",
+    "sar_synthetic": true,
+    "forcing_source": "configured_constant_defaults",
+    "forcing_live_fetch": false,
+    "drift_engine": "custom_advection_approximation",
+    "probabilities_calibrated": false,
+    "manifest_file": "runs\\quickstart_kerala_selection_manifest.json"
+  }
+}

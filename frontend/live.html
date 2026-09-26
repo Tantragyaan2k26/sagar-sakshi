@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAGAR-SAKSHI · Live API Console</title>
+  <style>
+    :root { color-scheme: dark; font: 16px/1.5 system-ui, sans-serif; background:#0c1419; color:#dbe4eb; }
+    body { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+    h1 { color:#80d2f1; } form, section { background:#182126; border:1px solid #3f484c; border-radius:8px; padding:1rem; margin:1rem 0; }
+    label { display:block; margin:.5rem 0; } input { width:min(100%,32rem); padding:.6rem; background:#070f14; color:inherit; border:1px solid #536168; border-radius:4px; }
+    button, a { display:inline-block; margin:.5rem .5rem .5rem 0; padding:.55rem .8rem; border-radius:4px; border:1px solid #63b6d4; background:#102b36; color:#b8eaff; cursor:pointer; }
+    pre { white-space:pre-wrap; overflow-wrap:anywhere; background:#070f14; padding:1rem; border-radius:4px; }
+    .muted { color:#aab8be; } .error { color:#ffb4ab; }
+  </style>
+</head>
+<body>
+  <h1>SAGAR-SAKSHI · Live API Console</h1>
+  <p class="muted">This page calls the local FastAPI service. The default Kerala configuration currently uses synthetic AIS, generated SAR when the GeoTIFF is absent, and constant configured forcing. Results are prototype outputs, not calibrated attribution probabilities.</p>
+  <form id="runForm">
+    <label>Configuration path <input id="configPath" value="config/kerala_2025.yaml" required></label>
+    <label>Run ID (optional) <input id="runId" placeholder="generated automatically"></label>
+    <button id="runButton" type="submit">Run pipeline</button>
+    <span id="status" role="status"></span>
+  </form>
+  <section id="result" hidden>
+    <h2>Run result</h2>
+    <div id="links"></div>
+    <pre id="output"></pre>
+    <h3>Analyst review</h3>
+    <form id="reviewForm">
+      <label>Reviewer ID <input id="reviewerId" value="demo-analyst" required></label>
+      <label>Notes <input id="reviewNotes" placeholder="Review rationale"></label>
+      <label>Decision
+        <select id="reviewDecision"><option value="inconclusive">Inconclusive</option><option value="accept">Accept</option><option value="reject">Reject</option></select>
+      </label>
+      <button type="submit">Record review</button>
+      <span id="reviewStatus" role="status"></span>
+    </form>
+  </section>
+  <script>
+    let currentCard = null;
+    const form = document.getElementById('runForm');
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const status = document.getElementById('status');
+      const button = document.getElementById('runButton');
+      const result = document.getElementById('result');
+      button.disabled = true;
+      status.textContent = 'Running synchronously; this may take a while…';
+      status.className = '';
+      result.hidden = true;
+      const body = { config_path: document.getElementById('configPath').value };
+      const runId = document.getElementById('runId').value.trim();
+      if (runId) body.run_id = runId;
+      try {
+        const response = await fetch('/runs', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(body) });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.detail || `HTTP ${response.status}`);
+        currentCard = data;
+        document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+        const id = encodeURIComponent(data.run_id);
+        const links = document.getElementById('links');
+        links.replaceChildren();
+        for (const [label, url] of [['JSON manifest', `/runs/${id}/manifest`], ['Evidence JSON', `/runs/${id}/card?format=json`], ['Evidence PDF', `/runs/${id}/card?format=pdf`]]) {
+          const link = document.createElement('a');
+          link.href = url;
+          link.target = '_blank';
+          link.rel = 'noopener';
+          link.textContent = label;
+          links.append(link);
+        }
+        result.hidden = false;
+        status.textContent = `Completed ${data.run_id}`;
+      } catch (error) {
+        status.textContent = error.message;
+        status.className = 'error';
+      } finally { button.disabled = false; }
+  });
+  document.getElementById('reviewForm').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const status = document.getElementById('reviewStatus');
+    const card = currentCard;
+    if (!card) {
+      status.textContent = 'Run the pipeline before recording a review.';
+      return;
+    }
+    status.textContent = 'Recording…';
+    try {
+      const response = await fetch(`/runs/${encodeURIComponent(card.run_id)}/review`, {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({
+          reviewer_id:document.getElementById('reviewerId').value,
+          notes:document.getElementById('reviewNotes').value || null,
+          decision:document.getElementById('reviewDecision').value
+        })
+      });
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.detail || `HTTP ${response.status}`);
+      status.textContent = `Recorded. Alert: ${data.alert?.status || 'none'}`;
+      document.getElementById('output').textContent = JSON.stringify({card, review:data}, null, 2);
+    } catch (error) { status.textContent = error.message; }
+  });
+  </script>
+</body>
+</html>

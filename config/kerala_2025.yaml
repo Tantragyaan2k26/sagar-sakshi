@@ -1,0 +1,56 @@
+incident:
+  incident_id: "kerala_2025_msc_elsa_3"
+  name: "MSC ELSA 3 capsize, Kerala coast"
+  location_name: "14.6 nm off Thottappally, Alappuzha, Kerala"
+  approximate_time_utc: "2025-05-25T02:20:00Z"
+  source_hypothesis: "MSC ELSA 3 wreck; event context only, not an independently verified SAR spill label"
+  demo_reference_point:
+    lat: 9.265
+    lon: 76.140
+  aoi:
+    min_lon: 76.05
+    min_lat: 9.15
+    max_lon: 76.35
+    max_lat: 9.45
+
+scene:
+  satellite: "Sentinel-1A"
+  product_id: "S1A_IW_GRDH_1SDV_20250528T004112_20250528T004137_059387_075F14_7F15_COG.SAFE"
+  product_status: "catalogue_footprint_covers_configured_aoi; full_product_not_downloaded"
+  acquisition_start_utc: "2025-05-28T00:41:12.668533Z"
+  acquisition_end_utc: "2025-05-28T00:41:37.668461Z"
+  orbit_direction: "ASCENDING"
+  tiff_path: "data/02_processed_tiff/Kerala_Processed.tif"
+  raw_zip: "data/01_raw_zip/S1A_IW_GRDH_1SDV_20250528T004112_20250528T004137_059387_075F14_7F15_COG.SAFE.zip"
+
+auxiliary_sar:
+  sensor: "ALOS-2 PALSAR-2"
+  acquisition_date: "2025-05-28"
+  product_status: "browse_previews_only_not_pipeline_input"
+  polarization_note: "FBD is dual-pol; not quad-pol"
+  preview_directory: "data/external/ALOS2_Kerala_2025_browse_previews"
+
+ais:
+  source: "synthetic"
+  window_hours: 24
+  target_vessel_name: "MSC ELSA 3"
+  target_mmsi: "SYN-KERALA-LEAD-01"
+
+metocean:
+  current_source: "configured_constant_demo"
+  wind_source: "configured_constant_demo"
+  default_current_u_mps: 0.15
+  default_current_v_mps: -0.25
+  default_wind_speed_mps: 5.8
+  default_wind_from_deg: 240.0
+
+thresholds:
+  wind_too_low_mps: 3.0
+  wind_too_high_mps: 10.0
+  min_detectable_ship_length_m: 20.0
+  max_drift_window_hours: 24
+  hard_cap_drift_hours: 48
+  posterior_a_threshold: 0.70
+  posterior_b_threshold: 0.60
+  prior_unknown: 0.15
+  tempering_exponent: 0.85

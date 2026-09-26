@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-dim":"#0c1419","surface-variant":"#2e363c","surface-container-low":"#141d22","tertiary":"#81d8b4","secondary-fixed-dim":"#edb1ff","on-tertiary-fixed-variant":"#00513b","on-primary":"#003544","error":"#ffb4ab","tertiary-fixed":"#9cf4cf","outline-variant":"#3f484c","on-error-container":"#ffdad6","surface":"#0c1419","error-container":"#93000a","inverse-surface":"#dbe4eb","on-secondary":"#4a1a5d","on-primary-fixed-variant":"#004d61","surface-container-high":"#232b31","primary-fixed":"#b8eaff","on-tertiary-fixed":"#002116","surface-container-highest":"#2e363c","tertiary-fixed-dim":"#80d7b3","on-tertiary":"#003827","secondary-container":"#663478","on-surface-variant":"#bec8cd","background":"#0c1419","secondary":"#edb1ff","inverse-primary":"#006780","surface-container":"#182126","secondary-fixed":"#f9d8ff","on-surface":"#dbe4eb","tertiary-container":"#65bc99","on-tertiary-container":"#004a35","on-error":"#690005","on-secondary-fixed-variant":"#633276","primary":"#80d2f1","on-background":"#dbe4eb","primary-fixed-dim":"#7fd1f0","surface-container-lowest":"#070f14","outline":"#889297","surface-tint":"#7fd1f0","on-secondary-fixed":"#320046","on-primary-container":"#004658","primary-container":"#63b6d4","inverse-on-surface":"#293137","on-secondary-container":"#dea3f0","surface-bright":"#323a40","on-primary-fixed":"#001f28"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-xl":"1.75rem","margin":"1rem","gutter":"0.75rem","space-sm":"0.5rem","space-xs":"0.25rem","space-md":"0.75rem","space-lg":"1.25rem"},fontFamily:{"display-lg":["Space Grotesk"],"headline-lg":["Space Grotesk"],"body-md":["Inter"],"mono-md":["JetBrains Mono"],"mono-sm":["JetBrains Mono"],"body-lg":["Inter"],"body-sm":["Inter"],"label-caps":["JetBrains Mono"],"headline-sm":["Space Grotesk"],"headline-xl":["Space Grotesk"],"mono-lg":["JetBrains Mono"]},fontSize:{"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-lg":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"500"}],"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"mono-md":["12px",{"lineHeight":"16px","letterSpacing":"0.03em","fontWeight":"400"}],"mono-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"400"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"400"}],"body-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"label-caps":["9px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"500"}],"headline-xl":["28px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"600"}],"mono-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"500"}]}}}};</script></head><body class="bg-surface-container-lowest text-on-surface antialiased select-none"><header class="fixed top-0 left-0 right-0 h-14 bg-surface-container-lowest/90 backdrop-blur-md z-50 flex items-center justify-between px-space-md border-b border-outline-variant/40"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><img alt="SAGAR-SAKSHI Radar Wave Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VFXmwKEkAwjq_5ohA1fx8kNGIK-uyZ6QgCp9Q62KutroFzABz0P6hsVFiJtaQcD-r2WiyTB8SpaE0BM1Hand_7dOp4u8bm5NS3tz91XktJgC3K2f8tAe1aafCY7Zs0TPFPFTX_ZWIUshtapPP8CDQJZu6unxMpiXqrwc_Ni21jV3suQwpWhj4jB9h_kpHsSD_lOE4wVptCVDAlmtZ1wb03clOWTwBHLDQhFqty-29G-qW9JZdeccdvrpHz"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase text-primary font-semibold tracking-wider leading-none">SAGAR-SAKSHI</span><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-widest mt-0.5">OCEAN WITNESS · SAR-AIS MARITIME ATTRIBUTION CONSOLE</span></div></div><span class="px-space-xs py-0.5 rounded-DEFAULT border border-primary/40 bg-primary/10 text-primary font-label-caps text-label-caps">DEMO DATA</span></div><div class="flex items-center gap-space-lg"><div class="relative w-80"><span class="material-symbols-outlined absolute left-space-sm top-1/2 -translate-y-1/2 text-on-surface-variant text-base">search</span><input class="w-full h-8 pl-8 pr-12 bg-surface-container-low border border-outline-variant/50 rounded-DEFAULT font-mono-sm text-mono-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary" placeholder="MMSI, IMO, Scene ID, Incident..." type="text"/><kbd class="absolute right-space-xs top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded-DEFAULT bg-surface-container-high border border-outline-variant text-on-surface-variant font-mono-sm text-[9px]">⌘K</kbd></div><div class="hidden xl:flex items-center gap-space-sm font-mono-sm text-mono-sm"><div class="flex items-center gap-1.5 px-space-xs py-1 rounded-DEFAULT bg-surface-container-low border border-outline-variant/30 text-primary"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span><span>AIS RECORDER ● LIVE</span></div><div class="flex items-center gap-1.5 px-space-xs py-1 rounded-DEFAULT bg-surface-container-low border border-outline-variant/30 text-tertiary"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span>CURRENTS ● FRESH</span></div><div class="flex items-center gap-1.5 px-space-xs py-1 rounded-DEFAULT bg-surface-container-low border border-outline-variant/30 text-on-surface-variant"><span class="material-symbols-outlined text-xs text-primary">satellite_alt</span><span>LAST S-1 PASS 06:12 UTC</span></div></div></div><div class="flex items-center gap-space-md"><div class="font-mono-md text-mono-md text-primary tracking-wide hidden md:block">14:28:43 UTC · 24 SEP</div><div class="h-6 w-px bg-outline-variant/40 hidden md:block"></div><div class="flex items-center gap-space-sm"><div class="text-right hidden sm:block"><div class="font-mono-sm text-mono-sm font-semibold text-on-surface leading-tight">Lt. Cdr. V. Sharma</div><div class="font-label-caps text-label-caps text-on-surface-variant">Analyst · Indian Coast Guard</div></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-primary/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBU-8VH9Jr5fZP8UuOm1aDyh0EQrrH5PAnKcUD2kbLj9bShaX3MYmqLZf2OqLyOwK2cqLg3_N95KCN6DnaYYnMtRsejgLbvyvBR8rmS-gk2k9c6DUEHwR3ALnxI6K__wnD7vrAkk8f9rF8vpAerNyiRZzG8LO1vvXcN5c5axY2Pbn8LFn63dgjOmjWhxiMtBXxw7z7Et6mSpDmlNfmDM9MH404oMiwO_H7l43Wi_k2p6h7Kf1KlNtkng"/></div></div></header><aside class="fixed left-0 top-14 bottom-0 w-[72px] bg-surface-container-lowest z-40 flex flex-col justify-between items-center py-space-sm border-r border-outline-variant/40"><nav class="w-full flex flex-col items-center gap-space-xs" data-active-classes="bg-surface-container text-primary border-primary shadow-[0_0_12px_rgba(99,182,212,0.25)]"><a class="w-14 h-14 rounded-DEFAULT flex flex-col items-center justify-center border border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all group relative" data-path="command-map" href="#"><span class="material-symbols-outlined text-xl mb-0.5">radar</span><span class="font-label-caps text-[8px] uppercase tracking-tighter leading-none text-center">Command</span></a><a aria-current="page" class="w-14 h-14 rounded-DEFAULT flex flex-col items-center justify-center transition-all group relative bg-surface-container text-primary border-primary shadow-[0_0_12px_rgba(99,182,212,0.25)]" data-path="incident-analysis" href="#"><span class="material-symbols-outlined text-xl mb-0.5">warning</span><span class="font-label-caps text-[8px] uppercase tracking-tighter leading-none text-center">Incidents</span><span class="absolute top-1.5 right-1.5 px-1 rounded-DEFAULT bg-error-container text-error font-mono-sm text-[9px] font-bold leading-tight">4</span></a><a class="w-14 h-14 rounded-DEFAULT flex flex-col items-center justify-center border border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all group relative" data-path="pipeline-runs" href="#"><span class="material-symbols-outlined text-xl mb-0.5">sync</span><span class="font-label-caps text-[8px] uppercase tracking-tighter leading-none text-center">Pipeline</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary animate-ping"></span></a><a class="w-14 h-14 rounded-DEFAULT flex flex-col items-center justify-center border border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all group relative" data-path="review-queue" href="#"><span class="material-symbols-outlined text-xl mb-0.5">fact_check</span><span class="font-label-caps text-[8px] uppercase tracking-tighter leading-none text-center">Review</span><span class="absolute top-1.5 right-1.5 px-1 rounded-DEFAULT bg-surface-container-high text-on-surface font-mono-sm text-[9px] leading-tight">2</span></a><a class="w-14 h-14 rounded-DEFAULT flex flex-col items-center justify-center border border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all group" data-path="evidence-cards" href="#"><span class="material-symbols-outlined text-xl mb-0.5">description</span><span class="font-label-caps text-[8px] uppercase tracking-tighter leading-none text-center">Evidence</span></a><a class="w-14 h-14 rounded-DEFAULT flex flex-col items-center justify-center border border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all group" data-path="coverage-data" href="#"><span class="material-symbols-outlined text-xl mb-0.5">satellite</span><span class="font-label-caps text-[8px] uppercase tracking-tighter leading-none text-center">Coverage</span></a></nav><div class="w-full flex flex-col items-center gap-space-xs"><a class="w-14 h-14 rounded-DEFAULT flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-xl mb-0.5">tune</span><span class="font-label-caps text-[8px] uppercase tracking-tighter leading-none text-center">Settings</span></a></div></aside><div class="pl-[72px]"><main class="relative pt-14 w-full min-h-screen bg-surface-container-lowest"><div class="flex flex-col w-full">
+<!-- SUB-HEADER TELEMETRY STRIP -->
+<div class="w-full bg-surface-container-low px-space-md py-space-xs flex flex-wrap items-center justify-between gap-y-2 select-none">
+<!-- Left telemetry -->
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Incident SS-0142</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-mono-sm">· Replay: Ennore 2017 (Chennai Coast)</span>
+</div>
+<div class="flex items-center gap-1.5 px-space-xs py-0.5 rounded-DEFAULT bg-surface-container font-mono-sm text-mono-sm text-primary">
+<span class="material-symbols-outlined text-[12px] text-primary">satellite_alt</span>
+<span class="truncate max-w-[220px] 2xl:max-w-none">S1A_IW_GRDH_1SDV_20170128T003842_015024_0188EB_C42B</span>
+</div>
+<div class="font-mono-sm text-mono-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+<span>28 Jan 2017 · 00:38:42 UTC</span>
+</div>
+</div>
+<!-- Center/Right Environmental Sensor Chips & Operational Context -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="flex items-center gap-1 px-2 py-0.5 rounded-DEFAULT bg-surface-container-high text-on-surface font-mono-sm text-mono-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary">air</span>
+<span>6.2 m/s · 290° WNW</span>
+<span class="text-on-surface-variant text-[9px]">(Workable)</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded-DEFAULT bg-surface-container-high text-on-surface font-mono-sm text-mono-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">waves</span>
+<span>Douglas 3 · 0.8m Swell</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded-DEFAULT bg-surface-container-high text-tertiary font-mono-sm text-mono-sm">
+<span class="material-symbols-outlined text-[14px]">model_training</span>
+<span>INCOIS Drift: Fresh (3h lag)</span>
+</div>
+</div>
+</div>
+<!-- NAVIGATION TABS -->
+<div class="w-full bg-surface-container-lowest px-space-md flex items-center justify-between border-b border-surface-variant/40">
+<div class="flex items-center gap-space-lg">
+<button class="flex items-center gap-1.5 py-2.5 font-headline-sm text-headline-sm text-primary border-b-2 border-primary tracking-wide transition-all">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Overview</span>
+</button>
+<button class="flex items-center gap-1.5 py-2.5 font-headline-sm text-headline-sm text-on-surface-variant hover:text-on-surface border-b-2 border-transparent transition-all">
+<span class="material-symbols-outlined text-[16px]">water</span>
+<span>Slicks (1)</span>
+</button>
+<button class="flex items-center gap-1.5 py-2.5 font-headline-sm text-headline-sm text-on-surface-variant hover:text-on-surface border-b-2 border-transparent transition-all">
+<span class="material-symbols-outlined text-[16px]">directions_boat</span>
+<span>Ships (9)</span>
+</button>
+<button class="flex items-center gap-1.5 py-2.5 font-headline-sm text-headline-sm text-on-surface-variant hover:text-on-surface border-b-2 border-transparent transition-all">
+<span class="material-symbols-outlined text-[16px]">timeline</span>
+<span>Drift Inversion</span>
+</button>
+<button class="flex items-center gap-1.5 py-2.5 font-headline-sm text-headline-sm text-on-surface-variant hover:text-on-surface border-b-2 border-transparent transition-all">
+<span class="material-symbols-outlined text-[16px]">folder_special</span>
+<span>Evidence Dossier</span>
+</button>
+</div>
+<!-- Quick action/view presets -->
+<div class="hidden lg:flex items-center gap-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Projection: UTM 44N / WGS84</span>
+<div class="w-1.5 h-1.5 rounded-full bg-tertiary"></div>
+<span class="font-label-caps text-label-caps text-tertiary">SYNCHRONIZED</span>
+</div>
+</div>
+<!-- MAIN DUAL-PANE COCKPIT (MAP ~66% / ATTRIBUTION ~34%) -->
+<div class="w-full flex-1 grid grid-cols-1 lg:grid-cols-12 min-h-[calc(100vh-130px)] bg-surface-container-lowest overflow-hidden">
+<!-- LEFT 8 COLS: TACTICAL SAR VIEWER & MAP BED -->
+<div class="lg:col-span-8 flex flex-col relative bg-surface-dim overflow-hidden min-h-[580px] lg:min-h-0">
+<!-- TOP MAP HUD CONTROLS OVERLAY -->
+<div class="absolute top-3 left-3 right-3 z-30 flex items-center justify-between pointer-events-none">
+<!-- Sensor Channel Switcher -->
+<div class="pointer-events-auto flex items-center bg-surface-container-lowest/90 backdrop-blur-md p-1 rounded-DEFAULT shadow-lg gap-1">
+<button class="px-2.5 py-1 rounded-DEFAULT bg-primary text-on-primary font-mono-sm text-mono-sm font-semibold tracking-wider transition-all" id="btn-sar-vv">
+            SAR VV
+          </button>
+<button class="px-2.5 py-1 rounded-DEFAULT text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-mono-sm text-mono-sm transition-all">
+            VH
+          </button>
+<button class="px-2.5 py-1 rounded-DEFAULT text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-mono-sm text-mono-sm transition-all">
+            WIND MASK
+          </button>
+<button class="px-2.5 py-1 rounded-DEFAULT text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-mono-sm text-mono-sm transition-all">
+            AIS HEATMAP
+          </button>
+</div>
+<!-- SAR Opacity & Utility Tools -->
+<div class="pointer-events-auto flex items-center gap-2 bg-surface-container-lowest/90 backdrop-blur-md p-1 px-2 rounded-DEFAULT shadow-lg">
+<div class="flex items-center gap-1.5 pr-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant">OPACITY</span>
+<input class="w-16 h-1 bg-surface-container-high accent-primary cursor-pointer" max="100" min="20" type="range" value="85"/>
+<span class="font-mono-sm text-mono-sm text-primary">85%</span>
+</div>
+<button class="px-2 py-1 rounded-DEFAULT bg-surface-container hover:bg-surface-container-high text-on-surface font-mono-sm text-mono-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">layers</span>
+<span>Layers</span>
+</button>
+<button class="p-1 rounded-DEFAULT bg-surface-container hover:bg-surface-container-high text-primary flex items-center justify-center" title="Toggle Graticule">
+<span class="material-symbols-outlined text-[15px]">grid_4x4</span>
+</button>
+<button class="p-1 rounded-DEFAULT bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center" title="Tactical Fullscreen">
+<span class="material-symbols-outlined text-[15px]">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- MAP VIEWPORT CANVAS / RADAR BED -->
+<div class="relative w-full flex-1 bg-surface-container-lowest overflow-hidden select-none">
+<!-- Synthesized High-Precision SAR Noise Texture & Ocean Graticule -->
+<div class="absolute inset-0 bg-[radial-gradient(#14242d_1px,transparent_1px)] [background-size:24px_24px] opacity-40"></div>
+<div class="absolute inset-0 bg-[radial-gradient(#1f3642_1px,transparent_1px)] [background-size:120px_120px] opacity-60"></div>
+<!-- Coastline representation (Ennore / Chennai Approaches) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Slick pattern gradient -->
+<radialgradient cx="50%" cy="50%" id="slickGlow" r="50%">
+<stop offset="0%" stop-color="#edb1ff" stop-opacity="0.6"></stop>
+<stop offset="60%" stop-color="#663478" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#edb1ff" stop-opacity="0.05"></stop>
+</radialgradient>
+<!-- Target Selection Pulse Reticle -->
+<filter height="160%" id="cyanGlow" width="160%" x="-30%" y="-30%">
+<fegaussianblur result="blur" stddeviation="3"></fegaussianblur>
+<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+</filter>
+<!-- Cone fill -->
+<lineargradient id="driftConeGrad" x1="100%" x2="20%" y1="60%" y2="20%">
+<stop offset="0%" stop-color="#80d2f1" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#80d2f1" stop-opacity="0.02"></stop>
+</lineargradient>
+</defs>
+<!-- Landmass silhouette (West coast of Bay of Bengal / Ennore Port) -->
+<path d="M 0,0 L 160,0 Q 185,140 190,260 T 170,420 T 150,600 T 130,850 L 0,850 Z" fill="#0f191f"></path>
+<path d="M 160,0 Q 185,140 190,260 T 170,420 T 150,600 T 130,850" fill="none" stroke="#2e3d45" stroke-width="1.5"></path>
+<!-- Ennore Port Breakwater Jetty -->
+<polyline fill="none" points="186,220 220,230 228,255" stroke="#3f515b" stroke-width="2.5"></polyline>
+<text fill="#889297" font-family="Space Grotesk" font-size="11" letter-spacing="1" x="110" y="245">KAMARAJAR (ENNORE) PORT</text>
+<text fill="#6a777d" font-family="Space Grotesk" font-size="11" letter-spacing="1" x="70" y="440">CHENNAI HARBOUR (S)</text>
+<!-- Depth bathymetric contours -->
+<path d="M 230,0 Q 250,200 270,360 T 260,650 T 240,850" fill="none" stroke="#172b35" stroke-dasharray="4 4" stroke-width="1"></path>
+<text fill="#36505c" font-family="JetBrains Mono" font-size="9" x="265" y="320">-20m</text>
+<path d="M 330,0 Q 360,240 380,480 T 360,850" fill="none" stroke="#172b35" stroke-dasharray="4 4" stroke-width="1"></path>
+<text fill="#36505c" font-family="JetBrains Mono" font-size="9" x="375" y="430">-50m</text>
+<!-- BACKWARD HYDRODYNAMIC DRIFT CONE (Back-projection upwind/upcurrent T-8h) -->
+<polygon fill="url(#driftConeGrad)" points="560,330 380,180 340,240"></polygon>
+<path d="M 560,330 L 380,180" opacity="0.8" stroke="#80d2f1" stroke-dasharray="4 4" stroke-width="1.2"></path>
+<path d="M 560,330 L 340,240" opacity="0.8" stroke="#80d2f1" stroke-dasharray="4 4" stroke-width="1.2"></path>
+<path d="M 380,180 Q 355,210 340,240" opacity="0.6" stroke="#80d2f1" stroke-dasharray="2 3" stroke-width="1.2"></path>
+<text fill="#80d2f1" font-family="JetBrains Mono" font-size="9" letter-spacing="0.5" x="330" y="165">ESTIMATED RELEASE WINDOW VERTEX [T-8h .. T-6h]</text>
+<!-- FORWARD DRIFT PROJECTIONS (Dotted Violet Towards Sensitive Shoreline) -->
+<path d="M 570,340 Q 520,380 430,410 Q 340,440 210,430" fill="none" stroke="#edb1ff" stroke-dasharray="2 4" stroke-width="1.8"></path>
+<circle cx="430" cy="410" fill="#edb1ff" r="3"></circle>
+<text fill="#edb1ff" font-family="JetBrains Mono" font-size="9" x="438" y="405">+6h Drift</text>
+<circle cx="340" cy="440" fill="#edb1ff" r="3"></circle>
+<text fill="#edb1ff" font-family="JetBrains Mono" font-size="9" x="348" y="455">+12h Impact Risk (Ennore Creek)</text>
+<circle cx="210" cy="430" fill="#ffb4ab" r="4"></circle>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="9" font-weight="bold" x="218" y="425">+24h Coastline Intercept</text>
+<!-- SAR DETECTED OIL SLICK POLYGON (#edb1ff / violet damping footprint) -->
+<path d="M 520,310 C 560,300 630,315 670,345 C 690,360 670,390 620,395 C 570,400 530,375 490,360 C 470,350 490,320 520,310 Z" fill="url(#slickGlow)" filter="url(#cyanGlow)" stroke="#edb1ff" stroke-width="1.6"></path>
+<!-- Secondary Finger Slicks -->
+<path d="M 640,380 C 670,390 710,410 690,425 C 665,430 630,405 640,380 Z" fill="#663478" fill-opacity="0.4" stroke="#edb1ff" stroke-dasharray="2 2" stroke-width="1"></path>
+<!-- MT AURELIA STAR: HISTORIC TRACK & AIS FIXES -->
+<path d="M 310,130 L 350,195 L 420,270 L 485,320 L 535,335 L 610,350" fill="none" opacity="0.9" stroke="#80d2f1" stroke-width="1.8"></path>
+<!-- Speed Anomaly segment highlighted -->
+<path d="M 485,320 L 535,335" fill="none" stroke="#f9d8ff" stroke-width="3"></path>
+<!-- Prior Fix Dots -->
+<circle cx="310" cy="130" fill="#80d2f1" r="2.5"></circle>
+<circle cx="350" cy="195" fill="#80d2f1" r="2.5"></circle>
+<circle cx="420" cy="270" fill="#80d2f1" r="2.5"></circle>
+<circle cx="485" cy="320" fill="#edb1ff" r="3.5"></circle>
+<!-- Speed Anomaly Callout -->
+<text fill="#f9d8ff" font-family="JetBrains Mono" font-size="9" x="495" y="310">SPEED DROP: 14.1 → 3.2 kn (T-6.2h)</text>
+</svg>
+<!-- FLOATING HUD CALLOUT: SLICK #3 -->
+<div class="absolute top-[320px] left-[590px] pointer-events-auto transform -translate-x-1/2 -translate-y-full z-20">
+<div class="bg-surface-container/95 backdrop-blur-md p-2 rounded-DEFAULT shadow-xl border-l-2 border-secondary flex flex-col gap-1 w-64">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-secondary font-semibold">Slick #3 (Primary)</span>
+<span class="px-1.5 py-0.2 rounded-DEFAULT bg-secondary-container text-on-secondary-container font-mono-sm text-mono-sm font-bold">P(oil): 0.87</span>
+</div>
+<div class="font-mono-sm text-mono-sm text-on-surface-variant flex items-center justify-between">
+<span>Area: 18.4 km²</span>
+<span>Thickness: ~1.2 µm</span>
+</div>
+<p class="font-body-sm text-[10px] text-on-surface/80 leading-tight">
+              C-Band VV low-backscatter dampening. Spatial congruency with Ennore anchorage outbound fairway.
+            </p>
+</div>
+<!-- Pin arrow -->
+<div class="w-2 h-2 bg-surface-container rotate-45 mx-auto -mt-1"></div>
+</div>
+<!-- TARGET SYMBOLOGY 1: MT AURELIA STAR (SELECTED TARGET) -->
+<div class="absolute top-[350px] left-[610px] -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-auto group cursor-pointer">
+<!-- Selection Reticle -->
+<div class="relative flex items-center justify-center w-12 h-12">
+<div class="absolute inset-0 rounded-full border border-primary/40 animate-ping"></div>
+<div class="w-8 h-8 rounded-full border border-primary flex items-center justify-center bg-primary/10">
+<!-- Vessel Triangle rotated to heading 112 deg -->
+<span class="material-symbols-outlined text-primary text-[20px] transform rotate-[112deg]" style="font-variation-settings: 'FILL' 1;">
+                navigation
+              </span>
+</div>
+</div>
+<!-- Label Tooltip -->
+<div class="absolute left-10 top-0 bg-surface-container-high/95 backdrop-blur-sm px-2 py-1 rounded-DEFAULT shadow-md whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-[12px] text-primary font-bold">MT AURELIA STAR</span>
+<span class="px-1 rounded-DEFAULT bg-primary/20 text-primary font-mono-sm text-[9px]">MATCH 0.58</span>
+</div>
+<div class="font-mono-sm text-mono-sm text-on-surface-variant">HDG: 112° · SOG: 10.4 kn · Crude Tanker</div>
+</div>
+</div>
+<!-- TARGET SYMBOLOGY 2: TARGET D-1 (DARK VESSEL / RED PULSING DIAMOND) -->
+<div class="absolute top-[220px] left-[490px] -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-auto group cursor-pointer">
+<div class="relative flex items-center justify-center w-10 h-10">
+<div class="absolute inset-0 rounded-full bg-error/20 animate-ping"></div>
+<div class="w-6 h-6 rotate-45 bg-error-container/80 flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-error text-[16px] -rotate-45" style="font-variation-settings: 'FILL' 1;">
+                priority_high
+              </span>
+</div>
+</div>
+<div class="absolute left-8 top-0 bg-surface-container-high/95 backdrop-blur-sm px-2 py-1 rounded-DEFAULT shadow-md whitespace-nowrap">
+<div class="flex items-center gap-1">
+<span class="font-mono-sm text-mono-sm font-bold text-error">TARGET D-1 (DARK)</span>
+<span class="px-1 rounded-DEFAULT bg-error-container text-on-error-container font-mono-sm text-[9px]">AIS OFFLINE</span>
+</div>
+<div class="font-mono-sm text-[10px] text-on-surface-variant">SAR RCS: ~185m · Est HDG: 025°</div>
+</div>
+</div>
+<!-- TARGET SYMBOLOGY 3: SAR-08 (AMBER UNCORRELATED CONTACT) -->
+<div class="absolute top-[160px] left-[580px] -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-auto">
+<div class="relative flex items-center justify-center w-8 h-8">
+<div class="w-4 h-4 rotate-45 border-2 border-secondary-fixed-dim bg-surface-container-lowest"></div>
+</div>
+<div class="absolute left-6 -top-1 bg-surface-container-high/90 px-1.5 py-0.5 rounded-DEFAULT whitespace-nowrap">
+<span class="font-mono-sm text-mono-sm text-secondary-fixed-dim">SAR-08 (Uncorrelated · 48m)</span>
+</div>
+</div>
+<!-- TARGET SYMBOLOGY 4 & 5: COMMERCE TRAFFIC (CYAN OUTLINES) -->
+<div class="absolute top-[480px] left-[660px] -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-auto opacity-75">
+<span class="material-symbols-outlined text-primary text-[15px] transform rotate-[42deg]" style="font-variation-settings: 'FILL' 1;">
+            navigation
+          </span>
+<span class="font-mono-sm text-[9px] text-on-surface-variant ml-1 whitespace-nowrap">MV Kaveri Trader</span>
+</div>
+<div class="absolute top-[280px] left-[730px] -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-auto opacity-60">
+<span class="material-symbols-outlined text-primary text-[15px] transform rotate-[195deg]" style="font-variation-settings: 'FILL' 1;">
+            navigation
+          </span>
+<span class="font-mono-sm text-[9px] text-on-surface-variant ml-1 whitespace-nowrap">Chem Phoenix</span>
+</div>
+<!-- BOTTOM-LEFT FLOATING COMPACT MAP LEGEND -->
+<div class="absolute bottom-20 left-3 z-30 bg-surface-container-lowest/90 backdrop-blur-md p-2.5 rounded-DEFAULT shadow-lg w-56 select-none">
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1.5 flex items-center justify-between">
+<span>Tactical Map Legend</span>
+<span class="material-symbols-outlined text-[12px] text-outline">info</span>
+</div>
+<div class="grid grid-cols-2 gap-y-1 gap-x-2 font-mono-sm text-[9px]">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-2 rounded-[2px] bg-secondary/70"></span>
+<span class="text-on-surface">Oil Slick (SAR)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[10px]">navigation</span>
+<span class="text-on-surface">AIS Matched</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rotate-45 bg-error inline-block"></span>
+<span class="text-on-surface">Dark Target D1</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rotate-45 border border-secondary-fixed-dim inline-block"></span>
+<span class="text-on-surface">SAR Unverified</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-0 border-t border-dashed border-primary"></span>
+<span class="text-on-surface">Back-Drift Cone</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-0 border-t border-dotted border-secondary"></span>
+<span class="text-on-surface">Forward Drift</span>
+</div>
+</div>
+</div>
+<!-- COORDINATE TELEMETRY BAR (BOTTOM) -->
+<div class="absolute bottom-16 right-3 z-30 bg-surface-container-lowest/80 backdrop-blur-md px-2 py-1 rounded-DEFAULT font-mono-sm text-mono-sm text-on-surface-variant flex items-center gap-3">
+<span>13°14'18.2"N, 80°22'41.6"E</span>
+<span class="text-outline-variant">|</span>
+<span>Depth: -24m</span>
+<span class="text-outline-variant">|</span>
+<span class="text-primary font-semibold">SAR Res: 10m/px</span>
+</div>
+</div>
+<!-- MAP SCRUBBER & TIMELINE PLAYBACK BAR (DOCKED TO MAP BOTTOM) -->
+<div class="w-full bg-surface-container-low px-space-md py-2 z-30 flex flex-col gap-1.5 select-none">
+<div class="flex items-center justify-between text-mono-sm font-mono-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<button class="w-6 h-6 rounded-DEFAULT bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+</button>
+<div class="flex items-center gap-1">
+<span class="text-on-surface font-semibold">T0 Image Time</span>
+<span class="text-primary">(28 Jan 00:38 UTC)</span>
+</div>
+</div>
+<!-- Speed chips -->
+<div class="flex items-center gap-1">
+<span class="font-label-caps text-label-caps text-on-surface-variant mr-1">PLAYBACK:</span>
+<button class="px-1.5 py-0.5 rounded-DEFAULT bg-surface-container font-mono-sm text-[10px] text-on-surface-variant hover:text-on-surface">1×</button>
+<button class="px-1.5 py-0.5 rounded-DEFAULT bg-primary text-on-primary font-mono-sm text-[10px] font-bold">4×</button>
+<button class="px-1.5 py-0.5 rounded-DEFAULT bg-surface-container font-mono-sm text-[10px] text-on-surface-variant hover:text-on-surface">16×</button>
+</div>
+</div>
+<!-- Scrubber Track with Discrete Event Flags -->
+<div class="relative w-full py-1">
+<!-- Main Line -->
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full relative">
+<!-- Progress fill -->
+<div class="h-full bg-primary rounded-full w-full"></div>
+<!-- Scrubber Thumb -->
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-3.5 h-3.5 bg-primary-fixed rounded-full shadow-[0_0_8px_rgba(128,210,241,0.8)] border border-on-primary cursor-pointer"></div>
+<!-- Discrete Milestone Marker 1: AIS Gap D-1 -->
+<div class="absolute left-[35%] top-1/2 -translate-y-1/2 group cursor-pointer">
+<div class="w-2.5 h-2.5 bg-error rounded-full ring-2 ring-surface-container-low"></div>
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col items-center bg-surface-container-highest px-2 py-1 rounded-DEFAULT whitespace-nowrap shadow-lg z-40">
+<span class="font-mono-sm text-[9px] text-error font-bold">T-8.5h: AIS Gap D-1</span>
+<span class="font-mono-sm text-[8px] text-on-surface-variant">Vessel turned transponder off</span>
+</div>
+</div>
+<!-- Discrete Milestone Marker 2: Speed Drop MT Aurelia -->
+<div class="absolute left-[45%] top-1/2 -translate-y-1/2 group cursor-pointer">
+<div class="w-2.5 h-2.5 bg-secondary-fixed-dim rounded-full ring-2 ring-surface-container-low"></div>
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col items-center bg-surface-container-highest px-2 py-1 rounded-DEFAULT whitespace-nowrap shadow-lg z-40">
+<span class="font-mono-sm text-[9px] text-secondary font-bold">T-6.2h: Speed Drop MT Aurelia (14→3.2 kn)</span>
+<span class="font-mono-sm text-[8px] text-on-surface-variant">Slick release vertex alignment</span>
+</div>
+</div>
+<!-- Discrete Milestone Marker 3: Tidal turn -->
+<div class="absolute left-[78%] top-1/2 -translate-y-1/2 group cursor-pointer">
+<div class="w-2 h-2 bg-on-surface-variant rounded-full ring-2 ring-surface-container-low"></div>
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col items-center bg-surface-container-highest px-2 py-1 rounded-DEFAULT whitespace-nowrap shadow-lg z-40">
+<span class="font-mono-sm text-[9px] text-on-surface font-semibold">T-1.4h: Tidal turn (Flood → Ebb)</span>
+<span class="font-mono-sm text-[8px] text-on-surface-variant">Current vectors reverse southward</span>
+</div>
+</div>
+</div>
+<!-- Bottom Time Labels -->
+<div class="flex items-center justify-between font-mono-sm text-[9px] text-on-surface-variant mt-1">
+<span>T−24 h (27 Jan 00:38 UTC)</span>
+<span>T−16 h</span>
+<span class="text-secondary font-semibold">T−8 h Release Window</span>
+<span>T0 (SAR Acquisition)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT 4 COLS: RIGOROUS ATTRIBUTION DOSSIER PANEL (~34%) -->
+<div class="lg:col-span-4 flex flex-col bg-surface-container-low overflow-y-auto max-h-[calc(100vh-130px)]">
+<!-- Panel Header & Calibrated Evidence Grade -->
+<div class="p-space-md bg-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">policy</span>
+<h2 class="font-headline-sm text-headline-sm uppercase text-on-surface font-bold tracking-wider">
+              Attribution Dossier
+            </h2>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary">
+<span class="font-label-caps text-label-caps font-bold">GRADE B · HIGH SUSPICION</span>
+</div>
+</div>
+<!-- Strict Non-Accusatory Scientific Guidance Banner -->
+<div class="p-2 rounded-DEFAULT bg-surface-container-low text-on-surface-variant font-body-sm text-[11px] leading-relaxed flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0 mt-0.5">verified_user</span>
+<p>
+            Algorithmic correlation based on INCOIS hydrodynamic drift inversion and S-1 SAR backscatter. All outputs require human analyst sign-off before regulatory notice.
+          </p>
+</div>
+<!-- Analyst Mode Switcher (Normal vs Insufficient Evidence Baseline) -->
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-caps text-label-caps text-outline">VIEW MODE:</span>
+<div class="flex items-center gap-1 bg-surface-container-lowest p-0.5 rounded-DEFAULT">
+<button class="px-2 py-0.5 rounded-DEFAULT bg-surface-container-high text-primary font-mono-sm text-[9px] font-semibold" id="tab-ranked">
+              Ranked Ledger (5)
+            </button>
+<button class="px-2 py-0.5 rounded-DEFAULT text-on-surface-variant hover:text-on-surface font-mono-sm text-[9px]" id="tab-inconclusive">
+              Null / Low Confidence
+            </button>
+</div>
+</div>
+</div>
+<!-- RANKED SUSPECT VESSEL LEDGER (MAIN CONTENT LIST) -->
+<div class="flex-1 p-space-md flex flex-col gap-space-sm" id="ledger-content">
+<!-- CARD 1: MT AURELIA STAR (SELECTED TARGET - HIGHEST PROBABILITY) -->
+<div class="p-space-md rounded-DEFAULT bg-surface-container relative shadow-lg cursor-pointer transition-all border-l-4 border-primary">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<span class="font-mono-md text-mono-md font-bold text-primary">#1</span>
+<span class="material-symbols-outlined text-primary text-[18px]">directions_boat</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">MT Aurelia Star</h3>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">Tanker / Crude · IMO 9384112 · Panama</span>
+</div>
+</div>
+<!-- Probability Score Display -->
+<div class="text-right">
+<div class="font-display-lg text-[26px] leading-tight font-bold text-primary">0.58</div>
+<div class="font-mono-sm text-mono-sm text-on-surface-variant font-mono">[0.44 – 0.71] CI</div>
+</div>
+</div>
+<!-- Credible Interval Horizontal Visual Whisker Bar -->
+<div class="mt-3 w-full flex flex-col gap-1">
+<div class="w-full h-2 bg-surface-container-lowest rounded-full relative overflow-visible">
+<!-- Credible interval zone (44% to 71%) -->
+<div class="absolute left-[44%] w-[27%] h-full bg-primary/25"></div>
+<!-- Main confidence bar (58%) -->
+<div class="h-full bg-primary rounded-full w-[58%]"></div>
+<!-- Whisker min and max ticks -->
+<div class="absolute left-[44%] -top-0.5 h-3 w-0.5 bg-primary"></div>
+<div class="absolute left-[71%] -top-0.5 h-3 w-0.5 bg-primary"></div>
+</div>
+<div class="flex items-center justify-between font-mono-sm text-[8px] text-on-surface-variant">
+<span>P=0.0</span>
+<span class="text-primary">Bayesian Posterior P(Attribution | SAR, AIS, Drift)</span>
+<span>P=1.0</span>
+</div>
+</div>
+<!-- Evidence Telemetry Chips -->
+<div class="mt-2.5 flex flex-wrap gap-1">
+<span class="px-1.5 py-0.5 rounded-DEFAULT bg-tertiary/15 text-tertiary font-mono-sm text-mono-sm font-semibold">
+              Drift match: 0.91
+            </span>
+<span class="px-1.5 py-0.5 rounded-DEFAULT bg-secondary/15 text-secondary font-mono-sm text-mono-sm">
+              Speed anomaly: 14→3.2 kn
+            </span>
+<span class="px-1.5 py-0.5 rounded-DEFAULT bg-surface-container-high text-on-surface font-mono-sm text-mono-sm">
+              Draft delta: -1.2m
+            </span>
+</div>
+<!-- Corroboration Micro Summary -->
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Trajectory intersects back-drift vertex at T-6h 18m. Vessel decelerated within slick corridor during nocturnal transit towards Chennai anchorage.
+          </p>
+<div class="mt-2 pt-2 border-t border-surface-variant/30 flex items-center justify-between font-mono-sm text-[10px] text-primary">
+<span>AUDIT HASH: SHA-256: 7f89..b491</span>
+<span class="flex items-center gap-1 font-semibold text-tertiary">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> VERIFIED BY INCOIS DRIFT
+            </span>
+</div>
+</div>
+<!-- CARD 2: UNIDENTIFIED SAR-ONLY TARGET D1 (DARK VESSEL) -->
+<div class="p-space-md rounded-DEFAULT bg-surface-container/60 hover:bg-surface-container transition-all cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<span class="font-mono-md text-mono-md font-bold text-error">#2</span>
+<span class="material-symbols-outlined text-error text-[18px]">warning</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-tight">Target D-1 (Dark Vessel)</h3>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">Length ≈ 185m · SAR RCS: High · Transponder OFF</span>
+</div>
+</div>
+<div class="text-right">
+<div class="font-display-lg text-[22px] leading-tight font-bold text-error">0.17</div>
+<div class="font-mono-sm text-mono-sm text-on-surface-variant font-mono">[0.08 – 0.27] CI</div>
+</div>
+</div>
+<!-- Credible Interval Bar -->
+<div class="mt-2.5 w-full flex flex-col gap-1">
+<div class="w-full h-1.5 bg-surface-container-lowest rounded-full relative">
+<div class="absolute left-[8%] w-[19%] h-full bg-error/20"></div>
+<div class="h-full bg-error rounded-full w-[17%]"></div>
+</div>
+</div>
+<div class="mt-2 flex flex-wrap gap-1">
+<span class="px-1.5 py-0.5 rounded-DEFAULT bg-error-container/30 text-error font-mono-sm text-mono-sm">
+              AIS Silence: 11.4h
+            </span>
+<span class="px-1.5 py-0.5 rounded-DEFAULT bg-surface-container-high text-on-surface font-mono-sm text-mono-sm">
+              Coverage 0.86 (Gap Anomalous)
+            </span>
+<span class="px-1.5 py-0.5 rounded-DEFAULT bg-surface-container-high text-on-surface font-mono-sm text-mono-sm">
+              Drift dist: 1.8 NM
+            </span>
+</div>
+</div>
+<!-- CARD 3: UNKNOWN / NATURAL SOURCE (PINNED BENCHMARK PRIOR) -->
+<div class="p-space-md rounded-DEFAULT bg-surface-container-lowest/80 border-l-2 border-outline transition-all">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<span class="font-mono-md text-mono-md text-outline">—</span>
+<span class="material-symbols-outlined text-outline text-[18px]">nature</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium leading-tight">Natural / Biogenic / Seep Prior</h3>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">Calibrated Null Hypothesis Prior</span>
+</div>
+</div>
+<div class="text-right">
+<div class="font-display-lg text-[20px] leading-tight font-medium text-on-surface-variant">0.13</div>
+<div class="font-mono-sm text-mono-sm text-on-surface-variant font-mono">[0.05 – 0.22] CI</div>
+</div>
+</div>
+<div class="mt-2 w-full h-1.5 bg-surface-container rounded-full relative">
+<div class="h-full bg-outline rounded-full w-[13%]"></div>
+</div>
+<p class="mt-2 font-body-sm text-[10px] text-outline leading-tight">
+            Baseline natural false-positive prior: algal films, low-wind sea slick lookalikes, or unmonitored coastal runoff.
+          </p>
+</div>
+<!-- CARD 4: MV KAVERI TRADER -->
+<div class="p-space-md rounded-DEFAULT bg-surface-container/50 hover:bg-surface-container transition-all cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<span class="font-mono-md text-mono-md text-on-surface-variant">#3</span>
+<span class="material-symbols-outlined text-primary text-[18px]">directions_boat</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium leading-tight">MV Kaveri Trader</h3>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">Bulk Carrier · MMSI 419001284 · India</span>
+</div>
+</div>
+<div class="text-right">
+<div class="font-display-lg text-[18px] leading-tight font-medium text-on-surface-variant">0.09</div>
+<div class="font-mono-sm text-mono-sm text-on-surface-variant font-mono">[0.03 – 0.16]</div>
+</div>
+</div>
+<div class="mt-2 flex flex-wrap gap-1">
+<span class="px-1.5 py-0.5 rounded-DEFAULT bg-surface-container-high text-on-surface-variant font-mono-sm text-mono-sm">
+              Early in window (T-14h)
+            </span>
+<span class="px-1.5 py-0.5 rounded-DEFAULT bg-surface-container-high text-on-surface-variant font-mono-sm text-mono-sm">
+              Course steady 042°
+            </span>
+</div>
+</div>
+<!-- CARD 5: FIXED PLATFORM / PIPELINE SEEP -->
+<div class="p-space-md rounded-DEFAULT bg-surface-container/30 hover:bg-surface-container transition-all cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<span class="font-mono-md text-mono-md text-outline">#4</span>
+<span class="material-symbols-outlined text-outline text-[18px]">factory</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium leading-tight">Ennore Anchorage SPM / Buoy</h3>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">Fixed Subsea Infrastructure</span>
+</div>
+</div>
+<div class="text-right">
+<div class="font-display-lg text-[18px] leading-tight font-medium text-on-surface-variant">0.03</div>
+<div class="font-mono-sm text-mono-sm text-on-surface-variant font-mono">[&lt;0.01 – 0.06]</div>
+</div>
+</div>
+<div class="mt-2 flex flex-wrap gap-1">
+<span class="px-1.5 py-0.5 rounded-DEFAULT bg-surface-container-high text-on-surface-variant font-mono-sm text-mono-sm">
+              No pressure drop reported
+            </span>
+</div>
+</div>
+<!-- COLLAPSIBLE ACCORDION: EXCLUDED TARGETS -->
+<div class="rounded-DEFAULT bg-surface-container-low p-2">
+<button class="w-full flex items-center justify-between font-mono-sm text-mono-sm text-on-surface-variant hover:text-on-surface">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+<span>Excluded Targets (7 vessels cleared)</span>
+</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface-variant text-[9px]">P &lt; 0.01</span>
+</button>
+<div class="mt-2 pt-2 border-t border-surface-variant/20 flex flex-col gap-1 font-mono-sm text-[10px] text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span>5 vessels outside backwards drift particle reach</span>
+<span class="text-tertiary">Hydrodynamically Disjoint</span>
+</div>
+<div class="flex items-center justify-between">
+<span>2 vessels cleared (departed fairway prior to T-24h)</span>
+<span class="text-tertiary">Temporal Exemption</span>
+</div>
+</div>
+</div>
+<!-- METHODOLOGY & SENSOR BOUNDARY FOOTNOTE CHIPS -->
+<div class="pt-2 flex flex-wrap gap-1 text-on-surface-variant font-mono-sm text-[9px]">
+<span class="bg-surface-container px-1.5 py-0.5 rounded-DEFAULT">10,000 Monte Carlo particles</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded-DEFAULT">SAR Min length: 20m</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded-DEFAULT">Hydrodynamics: INCOIS-CMEMS 0.25°</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded-DEFAULT">Atmosphere: ECMWF Reanalysis</span>
+</div>
+</div>
+<!-- INSUFFICIENT EVIDENCE TAB PLACEHOLDER (HIDDEN BY DEFAULT) -->
+<div class="hidden flex-1 p-space-md flex flex-col items-center justify-center text-center gap-3" id="insufficient-content">
+<span class="material-symbols-outlined text-[48px] text-outline">filter_drama</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Insufficient Evidence Baseline</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">
+          Simulated baseline state when Sentinel-1 backscatter damping ratio falls below the 3.2 dB threshold or wind exceeds 12 m/s. Attribution remains unassigned.
+        </p>
+<span class="px-2 py-1 rounded-DEFAULT bg-surface-container text-outline font-mono-sm text-mono-sm">
+          CONFIDENCE INTERVAL INCONCLUSIVE
+        </span>
+</div>
+<!-- STICKY ACTION DOCK AT BOTTOM OF RIGHT PANEL -->
+<div class="sticky bottom-0 bg-surface-container p-space-md flex flex-col gap-2 shadow-[0_-4px_16px_rgba(0,0,0,0.4)]">
+<!-- Primary Action -->
+<button class="w-full py-2.5 px-3 rounded-DEFAULT bg-primary hover:bg-primary-fixed text-on-primary font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-2 shadow-md transition-all">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Open Evidence Card &amp; Regulatory Dossier</span>
+</button>
+<!-- Secondary Action Row -->
+<div class="grid grid-cols-3 gap-2 font-mono-sm text-mono-sm">
+<button class="py-1.5 rounded-DEFAULT bg-tertiary/10 hover:bg-tertiary/20 text-tertiary font-semibold flex items-center justify-center gap-1 transition-all">
+<span class="material-symbols-outlined text-[14px]">thumb_up</span>
+<span>Accept Lead</span>
+</button>
+<button class="py-1.5 rounded-DEFAULT bg-surface-container-high hover:bg-surface-container-highest text-on-surface flex items-center justify-center gap-1 transition-all">
+<span class="material-symbols-outlined text-[14px]">thumb_down</span>
+<span>Reject Lead</span>
+</button>
+<button class="py-1.5 rounded-DEFAULT bg-primary/10 hover:bg-primary/20 text-primary flex items-center justify-center gap-1 transition-all">
+<span class="material-symbols-outlined text-[14px]">satellite</span>
+<span>Task EOS-04</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- CLIENT INTERACTIVITY SCRIPT -->
+<script>
+  (function initConsoleInteractions() {
+    const tabRanked = document.getElementById('tab-ranked');
+    const tabInconclusive = document.getElementById('tab-inconclusive');
+    const ledgerContent = document.getElementById('ledger-content');
+    const insufficientContent = document.getElementById('insufficient-content');
+
+    if (tabRanked && tabInconclusive && ledgerContent && insufficientContent) {
+      tabRanked.addEventListener('click', () => {
+        tabRanked.className = 'px-2 py-0.5 rounded-DEFAULT bg-surface-container-high text-primary font-mono-sm text-[9px] font-semibold';
+        tabInconclusive.className = 'px-2 py-0.5 rounded-DEFAULT text-on-surface-variant hover:text-on-surface font-mono-sm text-[9px]';
+        ledgerContent.classList.remove('hidden');
+        insufficientContent.classList.add('hidden');
+      });
+
+      tabInconclusive.addEventListener('click', () => {
+        tabInconclusive.className = 'px-2 py-0.5 rounded-DEFAULT bg-surface-container-high text-primary font-mono-sm text-[9px] font-semibold';
+        tabRanked.className = 'px-2 py-0.5 rounded-DEFAULT text-on-surface-variant hover:text-on-surface font-mono-sm text-[9px]';
+        ledgerContent.classList.add('hidden');
+        insufficientContent.classList.remove('hidden');
+      });
+    }
+  })();
+</script></main></div></body></html>

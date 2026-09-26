@@ -1,0 +1,65 @@
+{
+  "run_id": "test_e2e_run_001",
+  "manifest_sha256": "6b6f92752980c0a540b9cdde9ca827140497244ec94e8148528741eabf94cca1",
+  "attribution": {
+    "schema_version": "1.0",
+    "run_id": "test_e2e_run_001",
+    "posteriors": {
+      "SYN-KERALA-LEAD-01": 0.9246,
+      "SYN-DEMO-BG-03": 0.0066,
+      "U": 0.0688
+    },
+    "evidence_terms": {
+      "SYN-KERALA-LEAD-01": {
+        "drift_consistency": 2.5,
+        "slick_geometry": 1.0,
+        "head_proximity": 2.5,
+        "behaviour": 1.0
+      },
+      "SYN-DEMO-BG-03": {
+        "drift_consistency": 0.375,
+        "slick_geometry": 1.0,
+        "head_proximity": 0.05,
+        "behaviour": 1.0
+      }
+    },
+    "grade": "A",
+    "exclusions": [
+      {
+        "vessel_id": "SYN-DEMO-BG-02",
+        "reason": "Track never entered backward reachability envelope (closest approach: 21.4 nm)"
+      }
+    ],
+    "headline": "Strong lead; consistent with discharge by SYN-KERALA-LEAD-01"
+  },
+  "ais_status": "synthetic",
+  "generated_at_utc": "2026-09-25T22:41:31.448583Z",
+  "metadata": {
+    "incident_id": "kerala_2025_msc_elsa_3",
+    "incident_name": "MSC ELSA 3 capsize, Kerala coast",
+    "incident_location": "14.6 nm off Thottappally, Alappuzha, Kerala",
+    "incident_time_utc": "2025-05-25T02:20:00Z",
+    "scene_id": "S1A_IW_GRDH_1SDV_20250528T004112_20250528T004137_059387_075F14_7F15_COG.SAFE",
+    "satellite": "Sentinel-1A",
+    "scene_acquisition_start_utc": "2025-05-28T00:41:12.668533Z",
+    "scene_product_status": "catalogue_footprint_covers_configured_aoi; full_product_not_downloaded",
+    "scene_orbit_direction": "ASCENDING",
+    "wind_class": "workable",
+    "wind_speed_mps": 5.8,
+    "slick_count": 1,
+    "ship_detection_count": 6,
+    "matched_vessels": 1,
+    "sar_source": "synthetic_demo_raster",
+    "sar_synthetic": true,
+    "forcing_source": "configured_constant_defaults",
+    "forcing_live_fetch": false,
+    "wind_source": "configured_constant_demo",
+    "current_source": "configured_constant_demo",
+    "drift_engine": "custom_time_stepped_advection_approximation",
+    "probabilities_calibrated": false,
+    "spill_score_semantics": "uncalibrated_dark_patch_heuristic_score_not_oil_probability",
+    "spill_model": "adaptive_dark_pixel_threshold_unvalidated",
+    "spill_age_status": "unvalidated_heuristic_if_present",
+    "manifest_file": "runs\\test_e2e_run_001_manifest.json"
+  }
+}

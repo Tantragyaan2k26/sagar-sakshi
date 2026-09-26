@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-dim":"#0c1419","surface-variant":"#2e363c","surface-container-low":"#141d22","tertiary":"#81d8b4","secondary-fixed-dim":"#edb1ff","on-tertiary-fixed-variant":"#00513b","on-primary":"#003544","error":"#ffb4ab","tertiary-fixed":"#9cf4cf","outline-variant":"#3f484c","on-error-container":"#ffdad6","surface":"#0c1419","error-container":"#93000a","inverse-surface":"#dbe4eb","on-secondary":"#4a1a5d","on-primary-fixed-variant":"#004d61","surface-container-high":"#232b31","primary-fixed":"#b8eaff","on-tertiary-fixed":"#002116","surface-container-highest":"#2e363c","tertiary-fixed-dim":"#80d7b3","on-tertiary":"#003827","secondary-container":"#663478","on-surface-variant":"#bec8cd","background":"#0c1419","secondary":"#edb1ff","inverse-primary":"#006780","surface-container":"#182126","secondary-fixed":"#f9d8ff","on-surface":"#dbe4eb","tertiary-container":"#65bc99","on-tertiary-container":"#004a35","on-error":"#690005","on-secondary-fixed-variant":"#633276","primary":"#80d2f1","on-background":"#dbe4eb","primary-fixed-dim":"#7fd1f0","surface-container-lowest":"#070f14","outline":"#889297","surface-tint":"#7fd1f0","on-secondary-fixed":"#320046","on-primary-container":"#004658","primary-container":"#63b6d4","inverse-on-surface":"#293137","on-secondary-container":"#dea3f0","surface-bright":"#323a40","on-primary-fixed":"#001f28"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-xl":"1.75rem","margin":"1rem","gutter":"0.75rem","space-sm":"0.5rem","space-xs":"0.25rem","space-md":"0.75rem","space-lg":"1.25rem"},fontFamily:{"display-lg":["Space Grotesk"],"headline-lg":["Space Grotesk"],"body-md":["Inter"],"mono-md":["JetBrains Mono"],"mono-sm":["JetBrains Mono"],"body-lg":["Inter"],"body-sm":["Inter"],"label-caps":["JetBrains Mono"],"headline-sm":["Space Grotesk"],"headline-xl":["Space Grotesk"],"mono-lg":["JetBrains Mono"]},fontSize:{"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-lg":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"500"}],"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"mono-md":["12px",{"lineHeight":"16px","letterSpacing":"0.03em","fontWeight":"400"}],"mono-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"400"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"400"}],"body-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"label-caps":["9px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"500"}],"headline-xl":["28px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"600"}],"mono-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"500"}]}}}};</script></head><body class="bg-surface-container-lowest text-on-surface antialiased select-none"><header class="fixed top-0 left-0 right-0 h-14 bg-surface-container-lowest/90 backdrop-blur-md z-50 flex items-center justify-between px-space-md border-b border-outline-variant/40"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><img alt="SAGAR-SAKSHI Radar Wave Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VFXmwKEkAwjq_5ohA1fx8kNGIK-uyZ6QgCp9Q62KutroFzABz0P6hsVFiJtaQcD-r2WiyTB8SpaE0BM1Hand_7dOp4u8bm5NS3tz91XktJgC3K2f8tAe1aafCY7Zs0TPFPFTX_ZWIUshtapPP8CDQJZu6unxMpiXqrwc_Ni21jV3suQwpWhj4jB9h_kpHsSD_lOE4wVptCVDAlmtZ1wb03clOWTwBHLDQhFqty-29G-qW9JZdeccdvrpHz"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase text-primary font-semibold tracking-wider leading-none">SAGAR-SAKSHI</span><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-widest mt-0.5">OCEAN WITNESS · SAR-AIS MARITIME ATTRIBUTION CONSOLE</span></div></div><span class="px-space-xs py-0.5 rounded-DEFAULT border border-primary/40 bg-primary/10 text-primary font-label-caps text-label-caps">DEMO DATA</span></div><div class="flex items-center gap-space-lg"><div class="relative w-80"><span class="material-symbols-outlined absolute left-space-sm top-1/2 -translate-y-1/2 text-on-surface-variant text-base">search</span><input class="w-full h-8 pl-8 pr-12 bg-surface-container-low border border-outline-variant/50 rounded-DEFAULT font-mono-sm text-mono-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary" placeholder="MMSI, IMO, Scene ID, Incident..." type="text"/><kbd class="absolute right-space-xs top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded-DEFAULT bg-surface-container-high border border-outline-variant text-on-surface-variant font-mono-sm text-[9px]">⌘K</kbd></div><div class="hidden xl:flex items-center gap-space-sm font-mono-sm text-mono-sm"><div class="flex items-center gap-1.5 px-space-xs py-1 rounded-DEFAULT bg-surface-container-low border border-outline-variant/30 text-primary"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span><span>AIS RECORDER ● LIVE</span></div><div class="flex items-center gap-1.5 px-space-xs py-1 rounded-DEFAULT bg-surface-container-low border border-outline-variant/30 text-tertiary"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span>CURRENTS ● FRESH</span></div><div class="flex items-center gap-1.5 px-space-xs py-1 rounded-DEFAULT bg-surface-container-low border border-outline-variant/30 text-on-surface-variant"><span class="material-symbols-outlined text-xs text-primary">satellite_alt</span><span>LAST S-1 PASS 06:12 UTC</span></div></div></div><div class="flex items-center gap-space-md"><div class="font-mono-md text-mono-md text-primary tracking-wide hidden md:block">14:28:43 UTC · 24 SEP</div><div class="h-6 w-px bg-outline-variant/40 hidden md:block"></div><div class="flex items-center gap-space-sm"><div class="text-right hidden sm:block"><div class="font-mono-sm text-mono-sm font-semibold text-on-surface leading-tight">Lt. Cdr. V. Sharma</div><div class="font-label-caps text-label-caps text-on-surface-variant">Analyst · Indian Coast Guard</div></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-primary/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBU-8VH9Jr5fZP8UuOm1aDyh0EQrrH5PAnKcUD2kbLj9bShaX3MYmqLZf2OqLyOwK2cqLg3_N95KCN6DnaYYnMtRsejgLbvyvBR8rmS-gk2k9c6DUEHwR3ALnxI6K__wnD7vrAkk8f9rF8vpAerNyiRZzG8LO1vvXcN5c5axY2Pbn8LFn63dgjOmjWhxiMtBXxw7z7Et6mSpDmlNfmDM9MH404oMiwO_H7l43Wi_k2p6h7Kf1KlNtkng"/></div></div></header><aside class="fixed left-0 top-14 bottom-0 w-[72px] bg-surface-container-lowest z-40 flex flex-col justify-between items-center py-space-sm border-r border-outline-variant/40"><nav class="w-full flex flex-col items-center gap-space-xs" data-active-classes="bg-surface-container text-primary border-primary shadow-[0_0_12px_rgba(99,182,212,0.25)]"><a class="w-14 h-14 rounded-DEFAULT flex flex-col items-center justify-center border border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all group relative" data-path="command-map" href="#"><span class="material-symbols-outlined text-xl mb-0.5">radar</span><span class="font-label-caps text-[8px] uppercase tracking-tighter leading-none text-center">Command</span></a><a class="w-14 h-14 rounded-DEFAULT flex flex-col items-center justify-center border border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all group relative" data-path="incident-analysis" href="#"><span class="material-symbols-outlined text-xl mb-0.5">warning</span><span class="font-label-caps text-[8px] uppercase tracking-tighter leading-none text-center">Incidents</span><span class="absolute top-1.5 right-1.5 px-1 rounded-DEFAULT bg-error-container text-error font-mono-sm text-[9px] font-bold leading-tight">4</span></a><a aria-current="page" class="w-14 h-14 rounded-DEFAULT flex flex-col items-center justify-center transition-all group relative bg-surface-container text-primary border-primary shadow-[0_0_12px_rgba(99,182,212,0.25)]" data-path="pipeline-run-monitor" href="#"><span class="material-symbols-outlined text-xl mb-0.5">sync</span><span class="font-label-caps text-[8px] uppercase tracking-tighter leading-none text-center">Pipeline</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary animate-ping"></span></a><a class="w-14 h-14 rounded-DEFAULT flex flex-col items-center justify-center border border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all group relative" data-path="review-queue" href="#"><span class="material-symbols-outlined text-xl mb-0.5">fact_check</span><span class="font-label-caps text-[8px] uppercase tracking-tighter leading-none text-center">Review</span><span class="absolute top-1.5 right-1.5 px-1 rounded-DEFAULT bg-surface-container-high text-on-surface font-mono-sm text-[9px] leading-tight">2</span></a><a class="w-14 h-14 rounded-DEFAULT flex flex-col items-center justify-center border border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all group" data-path="evidence-card-mt-aurelia-star" href="#"><span class="material-symbols-outlined text-xl mb-0.5">description</span><span class="font-label-caps text-[8px] uppercase tracking-tighter leading-none text-center">Evidence</span></a><a class="w-14 h-14 rounded-DEFAULT flex flex-col items-center justify-center border border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all group" data-path="coverage" href="#"><span class="material-symbols-outlined text-xl mb-0.5">satellite</span><span class="font-label-caps text-[8px] uppercase tracking-tighter leading-none text-center">Coverage</span></a></nav><div class="w-full flex flex-col items-center gap-space-xs"><a class="w-14 h-14 rounded-DEFAULT flex flex-col items-center justify-center border border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-xl mb-0.5">tune</span><span class="font-label-caps text-[8px] uppercase tracking-tighter leading-none text-center">Settings</span></a></div></aside><div class="pl-[72px]"><main class="relative pt-14 w-full min-h-screen bg-surface-container-lowest"><div class="flex flex-col w-full text-on-surface">
+<!-- TOP RUN CONTEXT BANNER -->
+<section class="w-full px-margin py-space-md bg-surface-container-low/95 backdrop-blur-md">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<!-- Left: Title, State, Metadata Tag Cluster -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-tight font-semibold">
+            PIPELINE RUN <span class="text-primary font-mono-lg">· SS-0142</span>
+</span>
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded bg-primary/10 text-primary">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-mono-sm text-mono-sm font-semibold tracking-wider uppercase">RUNNING (STAGE 5/7)</span>
+</div>
+<div class="px-space-xs py-0.5 rounded bg-error-container/30 text-error font-label-caps text-label-caps uppercase tracking-widest">
+            HIGH PRIORITY · ICG POLLUTION RESPONSE
+          </div>
+</div>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 font-mono-sm text-mono-sm text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="text-outline uppercase text-[9px]">Scene:</span>
+<span class="text-on-surface hover:text-primary transition-colors cursor-pointer" title="Sentinel-1 SAR Product ID">
+              S1A_IW_GRDH_1SDV_20170128T003842_015024_01886B_8C14
+            </span>
+</div>
+<span class="text-outline-variant">/</span>
+<div class="flex items-center gap-1.5">
+<span class="text-outline uppercase text-[9px]">Node:</span>
+<span class="text-tertiary">node-gpu-h100-chennai-04</span>
+</div>
+<span class="text-outline-variant">/</span>
+<div class="flex items-center gap-1.5">
+<span class="text-outline uppercase text-[9px]">Trigger:</span>
+<span class="text-on-surface">Automated Trigger · Sentinel-1 Fresh Ingestion</span>
+</div>
+</div>
+</div>
+<!-- Right: Tactical Action Controls -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="flex items-center gap-1.5 px-space-sm py-1.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all text-body-sm font-body-sm shadow-sm" id="copyManifestBtn" title="Click to copy SHA-256 Manifest">
+<span class="material-symbols-outlined text-sm text-primary">content_copy</span>
+<span class="font-mono-sm text-mono-sm">7f89b491a62d...</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-sm py-1.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all text-body-sm font-body-sm shadow-sm">
+<span class="material-symbols-outlined text-sm">pause_circle</span>
+<span>Pause Pipeline</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-sm py-1.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all text-body-sm font-body-sm shadow-sm">
+<span class="material-symbols-outlined text-sm">replay</span>
+<span>Replay This Run</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-sm py-1.5 rounded bg-error/15 text-error hover:bg-error/25 transition-all text-body-sm font-body-sm shadow-sm">
+<span class="material-symbols-outlined text-sm">cancel</span>
+<span class="font-medium">Cancel Run</span>
+</button>
+</div>
+</div>
+</section>
+<!-- WORKFLOW DAG STEPPER (PIPELINE ENGINE) -->
+<section class="w-full px-margin py-space-md bg-surface-container-lowest overflow-x-auto">
+<div class="min-w-[1240px] flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-primary">account_tree</span>
+<span class="font-label-caps text-label-caps uppercase text-outline tracking-widest">DAG Attribution Graph Pipeline · 7 Topological Stages</span>
+</div>
+<div class="font-mono-sm text-mono-sm text-on-surface-variant flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>Synchronous Directed Acyclic Execution</span>
+</div>
+</div>
+<!-- DAG Grid: 7 stages with Twin Branch in stage 3 -->
+<div class="grid grid-cols-12 gap-space-xs items-center relative">
+<!-- Stage 1: Ingest -->
+<div class="col-span-2 flex flex-col justify-between p-space-sm rounded bg-surface-container-low shadow-sm h-36">
+<div class="flex items-start justify-between">
+<span class="font-mono-sm text-mono-sm text-outline">01 // INGEST</span>
+<span class="material-symbols-outlined text-tertiary text-base" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm font-semibold text-on-surface">Data Ingestion</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">S1 SAR VV/VH &amp; AIS Hub</div>
+</div>
+<div>
+<div class="flex justify-between font-mono-sm text-mono-sm text-tertiary mb-1">
+<span>02m 14s</span>
+<span>100%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-full"></div>
+</div>
+</div>
+</div>
+<!-- Stage 2: Conditioning -->
+<div class="col-span-2 flex flex-col justify-between p-space-sm rounded bg-surface-container-low shadow-sm h-36">
+<div class="flex items-start justify-between">
+<span class="font-mono-sm text-mono-sm text-outline">02 // COND</span>
+<span class="material-symbols-outlined text-tertiary text-base" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm font-semibold text-on-surface">Conditioning</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">Speckle Lee 7x7 &amp; Calib</div>
+</div>
+<div>
+<div class="flex justify-between font-mono-sm text-mono-sm text-tertiary mb-1">
+<span>04m 42s</span>
+<span>100%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-full"></div>
+</div>
+</div>
+</div>
+<!-- Stage 3: Twin Fork Lane (3A & 3B) -->
+<div class="col-span-2 flex flex-col justify-between gap-space-xs h-36">
+<!-- 3A: Spill Model -->
+<div class="flex-1 p-space-xs px-space-sm rounded bg-surface-container-low shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-mono-sm text-[9px] text-secondary">3A · SPILL SEGMENTATION</span>
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-headline-sm text-xs font-semibold text-on-surface">U-Net Polarimetric</span>
+<span class="font-mono-sm text-[10px] text-tertiary">08m 10s</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-full"></div>
+</div>
+</div>
+<!-- 3B: Ship Detector -->
+<div class="flex-1 p-space-xs px-space-sm rounded bg-surface-container-low shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-mono-sm text-[9px] text-primary">3B · SHIP DETECTOR</span>
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-headline-sm text-xs font-semibold text-on-surface">CFAR + Dark Target</span>
+<span class="font-mono-sm text-[10px] text-tertiary">06m 55s</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-full"></div>
+</div>
+</div>
+</div>
+<!-- Stage 4: Tracking & AIS Match -->
+<div class="col-span-2 flex flex-col justify-between p-space-sm rounded bg-surface-container-low shadow-sm h-36">
+<div class="flex items-start justify-between">
+<span class="font-mono-sm text-mono-sm text-outline">04 // AIS FUSION</span>
+<span class="material-symbols-outlined text-tertiary text-base" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm font-semibold text-on-surface">Tracking &amp; AIS Match</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">Trajectory &amp; Dead Reckoning</div>
+</div>
+<div>
+<div class="flex justify-between font-mono-sm text-mono-sm text-tertiary mb-1">
+<span>07m 20s</span>
+<span>100%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-full"></div>
+</div>
+</div>
+</div>
+<!-- Stage 5: Active Drift Ensemble -->
+<div class="col-span-2 flex flex-col justify-between p-space-sm rounded bg-surface-container shadow-[0_0_24px_rgba(99,182,212,0.2)] h-36 relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary/10 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-mono-sm text-mono-sm text-primary font-semibold">05 // ACTIVE</span>
+</div>
+<span class="font-label-caps text-[9px] uppercase px-1.5 py-0.5 rounded bg-primary/20 text-primary">ROMS</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm font-semibold text-primary">Drift Ensemble</div>
+<div class="font-body-sm text-body-sm text-on-surface truncate">10k Monte Carlo · INCOIS</div>
+</div>
+<div>
+<div class="flex justify-between font-mono-sm text-mono-sm text-primary mb-1">
+<span>08m 45s / ~14m</span>
+<span class="font-bold">62%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden relative">
+<div class="h-full bg-gradient-to-r from-primary to-surface-tint rounded-full w-[62%] relative overflow-hidden">
+<div class="absolute inset-0 bg-white/25 animate-[pulse_1.5s_infinite]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Stage 6: Evidence Fusion -->
+<div class="col-span-1 flex flex-col justify-between p-space-sm rounded bg-surface-container-low opacity-60 shadow-sm h-36">
+<div class="flex items-start justify-between">
+<span class="font-mono-sm text-[10px] text-outline">06 // FUSION</span>
+<span class="material-symbols-outlined text-outline text-base">hourglass_empty</span>
+</div>
+<div>
+<div class="font-headline-sm text-xs font-semibold text-on-surface">Evidence Fusion</div>
+<div class="font-body-sm text-[10px] text-on-surface-variant">Bayesian Posterior</div>
+</div>
+<div>
+<div class="flex justify-between font-mono-sm text-[10px] text-outline mb-1">
+<span>~04m 30s</span>
+<span>WAIT</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full"></div>
+</div>
+</div>
+<!-- Stage 7: Evidence Card -->
+<div class="col-span-1 flex flex-col justify-between p-space-sm rounded bg-surface-container-low opacity-60 shadow-sm h-36">
+<div class="flex items-start justify-between">
+<span class="font-mono-sm text-[10px] text-outline">07 // DOSSIER</span>
+<span class="material-symbols-outlined text-outline text-base">verified</span>
+</div>
+<div>
+<div class="font-headline-sm text-xs font-semibold text-on-surface">Evidence Card</div>
+<div class="font-body-sm text-[10px] text-on-surface-variant">SHA-256 Sign</div>
+</div>
+<div>
+<div class="flex justify-between font-mono-sm text-[10px] text-outline mb-1">
+<span>~01m 15s</span>
+<span>WAIT</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- MIDDLE 3-COLUMN TACTICAL TELEMETRY GRID -->
+<section class="w-full px-margin py-space-md grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- COLUMN 1: COMPUTATIONAL RESOURCE TELEMETRY -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Budget Radial Gauge Card -->
+<div class="p-space-md rounded bg-surface-container-low shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">timer</span>
+<span class="font-label-caps text-label-caps uppercase text-outline tracking-wider">Execution Budget &amp; SLA</span>
+</div>
+<span class="font-mono-sm text-mono-sm text-tertiary bg-tertiary/10 px-2 py-0.5 rounded">ON TRACK</span>
+</div>
+<div class="flex items-center justify-center py-space-sm">
+<!-- Radial Progress Gauge SVG -->
+<div class="relative w-44 h-44 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 160 160">
+<!-- Background Circle -->
+<circle class="text-surface-container-highest" cx="80" cy="80" fill="transparent" r="66" stroke="currentColor" stroke-width="10"></circle>
+<!-- S1-S4 elapsed segment -->
+<circle class="text-primary transition-all duration-1000" cx="80" cy="80" fill="transparent" r="66" stroke="currentColor" stroke-dasharray="414" stroke-dashoffset="153" stroke-linecap="round" stroke-width="10"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-headline-xl text-headline-xl font-bold text-on-surface leading-none">38<span class="text-headline-sm font-normal text-on-surface-variant">m</span></span>
+<span class="font-mono-sm text-mono-sm text-outline mt-1 uppercase">of 60m target</span>
+<span class="font-mono-sm text-[10px] text-primary font-semibold mt-0.5">63% ELAPSED</span>
+</div>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-base">schedule</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Est. Completion Target</span>
+</div>
+<span class="font-mono-sm text-mono-sm text-on-surface font-semibold">14m 20s <span class="text-outline font-normal">(01:16 UTC)</span></span>
+</div>
+</div>
+<!-- Resource Allocation Matrix -->
+<div class="p-space-md rounded bg-surface-container-low shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-outline tracking-wider">Cluster Hardware Health</span>
+<span class="font-mono-sm text-mono-sm text-tertiary">16 / 16 Workers Alive</span>
+</div>
+<!-- GPU Row -->
+<div class="p-space-sm rounded bg-surface-container flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">memory</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">NVIDIA H100 SXM5 80GB</span>
+</div>
+<span class="font-mono-md text-mono-md text-primary font-semibold">91.4%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[91.4%]"></div>
+</div>
+<div class="grid grid-cols-3 gap-2 pt-1 font-mono-sm text-[10px] text-on-surface-variant">
+<div>VRAM: <span class="text-on-surface">58.2 / 80 GB</span></div>
+<div>Tensor Core: <span class="text-on-surface">94%</span></div>
+<div>Temp: <span class="text-tertiary">64°C</span></div>
+</div>
+</div>
+<!-- Secondary Cluster Metrics -->
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="p-space-sm rounded bg-surface-container flex flex-col justify-between">
+<span class="font-label-caps text-[9px] uppercase text-outline">Queue Depth</span>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface mt-1">0 pending</span>
+<span class="font-mono-sm text-[10px] text-tertiary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Optimal Headroom
+            </span>
+</div>
+<div class="p-space-sm rounded bg-surface-container flex flex-col justify-between">
+<span class="font-label-caps text-[9px] uppercase text-outline">Telemetry Throughput</span>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface mt-1">142 MB/s</span>
+<span class="font-mono-sm text-[10px] text-on-surface-variant">18.4k IOPS Continuous</span>
+</div>
+</div>
+<!-- Ray Cluster Node Map -->
+<div class="p-space-sm rounded bg-surface-container flex items-center justify-between text-mono-sm font-mono-sm">
+<span class="text-on-surface-variant">Ray Cluster Nodes:</span>
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-tertiary/15 text-tertiary text-[9px]">node-01 ✓</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary/15 text-tertiary text-[9px]">node-02 ✓</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary/15 text-tertiary text-[9px]">node-03 ✓</span>
+<span class="px-1.5 py-0.5 rounded bg-primary/20 text-primary text-[9px] animate-pulse">node-04 (H100)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- COLUMN 2: SENSOR & ENVIRONMENTAL FEASIBILITY -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Wind Feasibility Donut Card -->
+<div class="p-space-md rounded bg-surface-container-low shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">air</span>
+<span class="font-label-caps text-label-caps uppercase text-outline tracking-wider">SAR Slick Detectability Envelope</span>
+</div>
+<span class="material-symbols-outlined text-outline text-sm" title="Capillary wave suppression threshold">help_outline</span>
+</div>
+<!-- Donut & Breakdown -->
+<div class="flex items-center gap-space-md py-space-xs">
+<!-- Donut SVG -->
+<div class="relative w-32 h-32 shrink-0 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 120 120">
+<!-- Base Circle -->
+<circle class="text-surface-container-highest" cx="60" cy="60" fill="transparent" r="48" stroke="currentColor" stroke-width="12"></circle>
+<!-- Low (< 3.0 m/s): 8% => dashoffset = 301.6 - (301.6 * 0.08) = 277 -->
+<circle class="text-error" cx="60" cy="60" fill="transparent" r="48" stroke="currentColor" stroke-dasharray="301.6" stroke-dashoffset="277" stroke-linecap="round" stroke-width="12"></circle>
+<!-- Workable (3-10 m/s): 78% => offset from 8% -->
+<circle class="text-tertiary" cx="60" cy="60" fill="transparent" r="48" stroke="currentColor" stroke-dasharray="235 301.6" stroke-dashoffset="-24" stroke-width="12"></circle>
+<!-- High (> 10 m/s): 14% -->
+<circle class="text-secondary" cx="60" cy="60" fill="transparent" r="48" stroke="currentColor" stroke-dasharray="42 301.6" stroke-dashoffset="-259" stroke-width="12"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-mono-md text-mono-md font-bold text-on-surface">6.2 <span class="text-[9px] font-normal text-on-surface-variant">m/s</span></span>
+<span class="font-label-caps text-[8px] text-tertiary uppercase">WNW</span>
+</div>
+</div>
+<!-- Donut Legend & Percentages -->
+<div class="flex flex-col gap-1.5 text-body-sm font-body-sm w-full">
+<div class="flex items-center justify-between p-1 rounded bg-surface-container">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="text-on-surface text-[11px]">Workable (3-10 m/s)</span>
+</div>
+<span class="font-mono-sm text-mono-sm text-tertiary font-semibold">78%</span>
+</div>
+<div class="flex items-center justify-between p-1 rounded bg-surface-container">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="text-on-surface text-[11px]">Too Low (&lt;3 m/s)</span>
+</div>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">8%</span>
+</div>
+<div class="flex items-center justify-between p-1 rounded bg-surface-container">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-on-surface text-[11px]">Too High (&gt;10 m/s)</span>
+</div>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">14%</span>
+</div>
+</div>
+</div>
+<div class="px-space-sm py-1.5 rounded bg-tertiary/10 text-tertiary font-body-sm text-body-sm flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span>Workable Wind Envelope (6.2 m/s WNW)</span>
+</div>
+<span class="font-label-caps text-[9px] font-bold">HIGH CONTRAST</span>
+</div>
+</div>
+<!-- Tactical Map Strip Card -->
+<div class="p-space-md rounded bg-surface-container-low shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase text-outline tracking-wider">Spatial Scene Framing &amp; Centroid</span>
+<span class="font-mono-sm text-mono-sm text-primary">13°14'N, 80°22'E</span>
+</div>
+<!-- Tactical Vector Radar Strip -->
+<div class="w-full h-32 bg-surface-container rounded relative overflow-hidden flex items-center justify-center" data-location="Chennai Coast, Bay of Bengal" style="">
+<div class="absolute inset-0 opacity-20 bg-[radial-gradient(#80d2f1_1px,transparent_1px)] [background-size:16px_16px]"></div>
+<!-- Coordinate crosshairs & vector slick outline -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" viewbox="0 0 340 128">
+<!-- Gridlines -->
+<line stroke="#24414B" stroke-dasharray="3 3" x1="0" x2="340" y1="64" y2="64"></line>
+<line stroke="#24414B" stroke-dasharray="3 3" x1="170" x2="170" y1="0" y2="128"></line>
+<!-- Coastline abstraction -->
+<path d="M 10 128 Q 50 80 40 40 T 70 0" fill="none" stroke="#3f484c" stroke-width="2"></path>
+<text fill="#889297" font-family="JetBrains Mono" font-size="8" x="18" y="24">CHENNAI ROADS</text>
+<!-- Scene Bounding Box -->
+<rect fill="rgba(99, 182, 212, 0.05)" height="88" stroke="#63b6d4" stroke-dasharray="4 2" stroke-width="1" width="160" x="110" y="20"></rect>
+<text fill="#63b6d4" font-family="JetBrains Mono" font-size="7" x="115" y="32">SCENE EXTENT · SS-0142</text>
+<!-- Slick Centroid Polygon -->
+<polygon fill="rgba(198, 141, 216, 0.4)" points="180,60 205,52 220,68 195,75" stroke="#c68dd8" stroke-width="1.5"></polygon>
+<!-- Wind Vector Arrow -->
+<line marker-end="url(#arrow)" stroke="#81d8b4" stroke-width="1.5" x1="230" x2="200" y1="35" y2="50"></line>
+<text fill="#81d8b4" font-family="JetBrains Mono" font-size="7" x="235" y="38">6.2 m/s</text>
+</svg>
+<div class="absolute bottom-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 font-mono-sm text-[9px] text-on-surface-variant backdrop-blur-sm">
+            SWATH: 250km IW · RESOLUTION: 10m
+          </div>
+</div>
+<!-- Integrity Bar -->
+<div class="flex flex-col gap-1 pt-1">
+<div class="flex justify-between font-mono-sm text-mono-sm">
+<span class="text-on-surface-variant">Scene Ingestion Integrity</span>
+<span class="text-tertiary font-semibold">99.4%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-[99.4%]"></div>
+</div>
+<div class="flex justify-between font-mono-sm text-[10px] text-outline">
+<span>100% AIS feed parity</span>
+<span>98.8% SAR valid pixels</span>
+<span>0 missing bursts</span>
+</div>
+</div>
+</div>
+</div>
+<!-- COLUMN 3: ML MODEL REGISTRY & SCIENTIFIC BENCHMARKS -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="p-space-md rounded bg-surface-container-low shadow-sm flex flex-col gap-space-sm h-full">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">hub</span>
+<span class="font-label-caps text-label-caps uppercase text-outline tracking-wider">Forensics Model Registry</span>
+</div>
+<span class="font-mono-sm text-mono-sm text-tertiary bg-tertiary/10 px-2 py-0.5 rounded">3/3 ACTIVE</span>
+</div>
+<!-- Model 1 -->
+<div class="p-space-sm rounded bg-surface-container flex flex-col gap-1 hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-xs font-semibold text-on-surface">SAR Spill Segmentation</span>
+<span class="font-mono-sm text-[10px] text-primary">v3.8.2-ocean-prod</span>
+</div>
+<div class="font-body-sm text-[11px] text-on-surface-variant truncate">
+            U-Net-ResNet101 + Polarimetric Attention
+          </div>
+<div class="flex items-center justify-between pt-1 font-mono-sm text-[10px]">
+<span class="text-outline">Calibration Error (ECE):</span>
+<span class="text-tertiary font-semibold">0.034 (Low)</span>
+</div>
+<div class="text-[9px] font-mono-sm text-outline">Validated: 2024-09-18 (NIO Goa Benchmarks)</div>
+</div>
+<!-- Model 2 -->
+<div class="p-space-sm rounded bg-surface-container flex flex-col gap-1 hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-xs font-semibold text-on-surface">CFAR Vessel &amp; Dark Target</span>
+<span class="font-mono-sm text-[10px] text-primary">v2.4.1-rc3</span>
+</div>
+<div class="font-body-sm text-[11px] text-on-surface-variant truncate">
+            Two-parameter CFAR + RCS Feature Extraction
+          </div>
+<div class="flex items-center justify-between pt-1 font-mono-sm text-[10px]">
+<span class="text-outline">Threshold / ECE:</span>
+<span class="text-on-surface font-semibold">Pfa=10⁻⁶ · 0.028</span>
+</div>
+<div class="text-[9px] font-mono-sm text-outline">Validated: 2024-09-21 (DG Shipping Testbed)</div>
+</div>
+<!-- Model 3 -->
+<div class="p-space-sm rounded bg-surface-container flex flex-col gap-1 hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-xs font-semibold text-on-surface">Bayesian Evidence &amp; Drift</span>
+<span class="font-mono-sm text-[10px] text-secondary">v4.1.0-monte-carlo</span>
+</div>
+<div class="font-body-sm text-[11px] text-on-surface-variant truncate">
+            INCOIS ROMS 0.25° + CMEMS Hydrodynamic
+          </div>
+<div class="flex items-center justify-between pt-1 font-mono-sm text-[10px]">
+<span class="text-outline">Likelihood Calibration:</span>
+<span class="text-tertiary font-semibold">Brier Score: 0.082</span>
+</div>
+<div class="text-[9px] font-mono-sm text-outline">Validated: 2024-09-24 00:00 UTC (Current Run)</div>
+</div>
+<!-- Quick Summary Note -->
+<div class="mt-auto p-space-xs rounded bg-surface-container-lowest flex items-center gap-2 text-mono-sm font-mono-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-primary">encrypted</span>
+<span class="text-[10px]">Deterministic seeds pinned across all inference pipelines</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CONTINGENCY PROTOCOL CALLOUT (AIS-UNAVAILABLE FALLBACK SIMULATION) -->
+<section class="w-full px-margin py-space-xs">
+<div class="p-space-md rounded bg-surface-container-low shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-md relative overflow-hidden">
+<div class="flex items-start gap-space-md">
+<div class="p-space-xs rounded bg-error-container/20 text-error shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl">flip_camera_ios</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">NOTICE // CONTINGENCY PROTOCOL SIMULATION: AIS UNAVAILABLE SCENARIO</span>
+<span class="px-2 py-0.5 rounded bg-error-container/30 text-error font-label-caps text-label-caps font-semibold">
+              AIS UNAVAILABLE · SAR-ONLY FALLBACK
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+            If coastal AIS transponder networks fail or anomalous vessels operate dark without broadcasting NMEA sentences, SAGAR-SAKSHI automatically shifts to unranked SAR-only target extraction. Target identification probability collapses to uniform null hypothesis P(H₀), relying exclusively on Radar Cross Section (RCS) geometric sizing.
+          </p>
+</div>
+</div>
+<button class="shrink-0 px-space-md py-space-sm rounded bg-surface-container text-primary hover:bg-surface-container-high transition-colors font-headline-sm text-xs font-semibold flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-sm">troubleshoot</span>
+<span>Preview SAR-Only Fallback Output</span>
+</button>
+</div>
+</section>
+<!-- BOTTOM SECTION: LIVE STRUCTURED FORENSIC LOG STREAM -->
+<section class="w-full px-margin py-space-md flex flex-col gap-space-sm">
+<div class="p-space-md rounded bg-surface-container-low shadow-sm flex flex-col gap-space-sm">
+<!-- Table Header & Filter Bar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-base">terminal</span>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Live Execution Telemetry &amp; Forensic Audit Stream</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary/15 text-tertiary font-mono-sm text-[10px] font-semibold">AUTO-SCROLL: ON</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-outline text-xs">filter_list</span>
+<input class="h-7 pl-7 pr-3 bg-surface-container rounded font-mono-sm text-mono-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-high w-48 sm:w-64" id="logSearchInput" placeholder="Filter audit stream..." type="text"/>
+</div>
+<button class="px-2 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-mono-sm text-[10px]" id="clearLogBtn">
+            CLEAR VIEW
+          </button>
+</div>
+</div>
+<!-- Telemetry Stream Table -->
+<div class="overflow-x-auto rounded bg-surface-container-lowest">
+<table class="w-full text-left font-mono-sm text-mono-sm border-collapse">
+<thead>
+<tr class="bg-surface-container text-outline text-[10px] uppercase font-semibold">
+<th class="py-2 px-3">UTC Timestamp</th>
+<th class="py-2 px-3">Stage</th>
+<th class="py-2 px-3">Component</th>
+<th class="py-2 px-3">Log Level</th>
+<th class="py-2 px-3">Structured Forensic Event Payload</th>
+<th class="py-2 px-3 text-right">Node / Worker ID</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container/40" id="logTableBody">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-high/60 transition-colors">
+<td class="py-2 px-3 text-on-surface">00:38:44.102</td>
+<td class="py-2 px-3 text-on-surface-variant">STAGE 1</td>
+<td class="py-2 px-3 text-primary">S1_INGEST</td>
+<td class="py-2 px-3">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface text-[9px] font-semibold">INFO</span>
+</td>
+<td class="py-2 px-3 text-on-surface">S1A GRD slice ingested successfully. 28,400 x 18,200 px C-Band VV/VH polarized channels.</td>
+<td class="py-2 px-3 text-right text-outline">worker-01</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-high/60 transition-colors">
+<td class="py-2 px-3 text-on-surface">00:40:58.450</td>
+<td class="py-2 px-3 text-on-surface-variant">STAGE 2</td>
+<td class="py-2 px-3 text-outline">SPECKLE_FLT</td>
+<td class="py-2 px-3">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant text-[9px]">DEBUG</span>
+</td>
+<td class="py-2 px-3 text-on-surface-variant">Lee Filter 7x7 applied; ENL shifted 4.82 -&gt; 16.94 across open ocean mask.</td>
+<td class="py-2 px-3 text-right text-outline">worker-03</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-high/60 transition-colors">
+<td class="py-2 px-3 text-on-surface">00:45:40.118</td>
+<td class="py-2 px-3 text-secondary font-medium">STAGE 3A</td>
+<td class="py-2 px-3 text-secondary">SPILL_SEG</td>
+<td class="py-2 px-3">
+<span class="px-1.5 py-0.5 rounded bg-secondary/15 text-secondary text-[9px] font-semibold">METRIC</span>
+</td>
+<td class="py-2 px-3 text-on-surface">Slick candidate #3 isolated. Surface area: <span class="text-secondary font-semibold">18.42 km²</span>, backscatter damping: <span class="text-secondary">-11.8 dB</span>.</td>
+<td class="py-2 px-3 text-right text-outline">gpu-worker-0</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-high/60 transition-colors">
+<td class="py-2 px-3 text-on-surface">00:47:35.620</td>
+<td class="py-2 px-3 text-primary font-medium">STAGE 3B</td>
+<td class="py-2 px-3 text-primary">CFAR_SHIP</td>
+<td class="py-2 px-3">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface text-[9px] font-semibold">INFO</span>
+</td>
+<td class="py-2 px-3 text-on-surface">9 marine targets extracted; 1 non-correlated dark contact (<span class="text-error font-semibold">TARGET-D1</span>, LOA 174m, RCS 48.2 dBm²).</td>
+<td class="py-2 px-3 text-right text-outline">gpu-worker-1</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-high/60 transition-colors bg-warning/5">
+<td class="py-2 px-3 text-on-surface">00:54:55.912</td>
+<td class="py-2 px-3 text-on-surface-variant">STAGE 4</td>
+<td class="py-2 px-3 text-primary">AIS_CORR</td>
+<td class="py-2 px-3">
+<span class="px-1.5 py-0.5 rounded bg-warning/20 text-warning text-[9px] font-bold">WARN</span>
+</td>
+<td class="py-2 px-3 text-on-surface">AIS gap detected for IMO 9384112 between 01:45 and 03:30 UTC. Dead-reckoning spline interpolation engaged.</td>
+<td class="py-2 px-3 text-right text-outline">worker-08</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container-high/60 transition-colors">
+<td class="py-2 px-3 text-on-surface">01:02:18.040</td>
+<td class="py-2 px-3 text-primary font-semibold">STAGE 5</td>
+<td class="py-2 px-3 text-tertiary">INCOIS_ROMS</td>
+<td class="py-2 px-3">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface text-[9px] font-semibold">INFO</span>
+</td>
+<td class="py-2 px-3 text-on-surface">Lagrangian backward simulation running (particle count: 10,000, step: 60s, boundary CMEMS Bay of Bengal).</td>
+<td class="py-2 px-3 text-right text-outline">gpu-worker-0</td>
+</tr>
+<!-- Row 7 -->
+<tr class="hover:bg-surface-container-high/60 transition-colors">
+<td class="py-2 px-3 text-on-surface">01:03:42.819</td>
+<td class="py-2 px-3 text-primary font-semibold">STAGE 5</td>
+<td class="py-2 px-3 text-primary">DRIFT_ENS</td>
+<td class="py-2 px-3">
+<span class="px-1.5 py-0.5 rounded bg-primary/20 text-primary text-[9px] font-semibold">METRIC</span>
+</td>
+<td class="py-2 px-3 text-primary">Particle dispersion convergence at 62%. Release vertex candidate at T-8h matches vessel trajectory vector #4.</td>
+<td class="py-2 px-3 text-right text-outline">gpu-worker-2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- FORENSIC FOOTER BAR & PROVENANCE HASH -->
+<footer class="w-full px-margin py-space-sm bg-surface-container-low/80 backdrop-blur-sm mt-auto">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<!-- Left: Cryptographic Proof -->
+<div class="flex items-center gap-space-sm font-mono-sm text-mono-sm">
+<span class="material-symbols-outlined text-tertiary text-base" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-outline uppercase text-[10px]">SHA-256 Manifest:</span>
+<span class="text-on-surface select-all cursor-pointer font-medium" title="Cryptographically signed pipeline run manifest">
+          7f89b491a62de4e83c0f28e5192849e7b238a4c90d561234e6f9810a12b3c4d5
+        </span>
+</div>
+<!-- Right: Action Commands -->
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-1.5 px-space-sm py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-sm">replay</span>
+<span>Replay This Run</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-sm py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-sm">download</span>
+<span>Export Telemetry JSON</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-sm py-1 rounded bg-surface-container text-primary hover:bg-surface-container-high transition-colors text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-sm">terminal</span>
+<span class="font-mono-sm">Cluster Shell [SSH]</span>
+</button>
+</div>
+</div>
+</footer>
+<!-- CLIENT-SIDE TELEMETRY MICRO-INTERACTIONS -->
+<script>
+    (function initPipelineMonitor() {
+      // Copy Manifest Hash Toast Interaction
+      const copyBtn = document.getElementById('copyManifestBtn');
+      if (copyBtn) {
+        copyBtn.addEventListener('click', () => {
+          const hash = '7f89b491a62de4e83c0f28e5192849e7b238a4c90d561234e6f9810a12b3c4d5';
+          navigator.clipboard.writeText(hash).then(() => {
+            const originalHTML = copyBtn.innerHTML;
+            copyBtn.innerHTML = '<span class="material-symbols-outlined text-sm text-tertiary">check</span><span class="font-mono-sm text-mono-sm text-tertiary">Copied Hash!</span>';
+            setTimeout(() => {
+              copyBtn.innerHTML = originalHTML;
+            }, 2000);
+          });
+        });
+      }
+
+      // Live Log Filter
+      const searchInput = document.getElementById('logSearchInput');
+      const tableBody = document.getElementById('logTableBody');
+      if (searchInput && tableBody) {
+        searchInput.addEventListener('input', (e) => {
+          const query = e.target.value.toLowerCase();
+          const rows = tableBody.querySelectorAll('tr');
+          rows.forEach(row => {
+            const text = row.innerText.toLowerCase();
+            row.style.display = text.includes(query) ? '' : 'none';
+          });
+        });
+      }
+
+      // Clear View Action
+      const clearBtn = document.getElementById('clearLogBtn');
+      if (clearBtn && searchInput) {
+        clearBtn.addEventListener('click', () => {
+          searchInput.value = '';
+          const rows = tableBody.querySelectorAll('tr');
+          rows.forEach(r => r.style.display = '');
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>

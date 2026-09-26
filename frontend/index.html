@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b151b">
+  <title>SAGAR-SAKSHI · Incident analysis</title>
+  <style>
+    :root { color-scheme: dark; font: 16px/1.5 Inter, ui-sans-serif, system-ui, sans-serif; background:#0b151b; color:#e5edf0; --panel:#122129; --line:#29404a; --muted:#a3b5bc; --blue:#73c9e9; --green:#8dd6b5; --amber:#f3c879; --red:#f09c93; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:1rem max(1.25rem,calc((100vw - 1080px)/2)); border-bottom:1px solid var(--line); background:#0d1a20; }
+    .brand { font-weight:750; letter-spacing:.08em; color:var(--blue); }
+    header a, .text-link { color:var(--blue); text-decoration:none; font-size:.9rem; }
+    main { width:min(100% - 2rem,880px); margin:2.25rem auto 4rem; }
+    h1 { font-size:clamp(1.8rem,4vw,2.5rem); line-height:1.15; margin:.3rem 0 .6rem; letter-spacing:-.035em; }
+    h2 { font-size:1.15rem; margin:0 0 .8rem; }
+    h3 { font-size:1rem; margin:.2rem 0 .4rem; }
+    p { margin:.3rem 0; }
+    .eyebrow { font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color:var(--blue); font-weight:700; }
+    .intro { color:var(--muted); max-width:680px; margin-bottom:1.5rem; }
+    .panel { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:1.2rem; margin:1rem 0; }
+    .scenario-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.75rem; }
+    .scenario { position:relative; display:block; padding:1rem; border:1px solid var(--line); border-radius:9px; background:#0e1b21; cursor:pointer; }
+    .scenario:has(input:checked) { border-color:var(--blue); box-shadow:0 0 0 1px var(--blue) inset; background:#10242d; }
+    .scenario input { accent-color:var(--blue); margin:0 .45rem .6rem 0; }
+    .scenario strong { font-size:1rem; }
+    .scenario span { display:block; color:var(--muted); font-size:.87rem; }
+    .sources { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.55rem; margin-top:1rem; }
+    .source { padding:.7rem .8rem; border-radius:8px; background:#0c191f; border:1px solid #203740; font-size:.84rem; }
+    .source b { display:block; color:#f1f5f6; font-size:.8rem; margin-bottom:.15rem; }
+    .source span { color:var(--muted); }
+    .notice { border-left:3px solid var(--amber); padding:.75rem .9rem; background:#241f16; color:#f4dfb8; border-radius:4px; font-size:.9rem; margin-top:.9rem; }
+    button { color:#06202a; background:var(--blue); border:0; padding:.75rem 1rem; border-radius:7px; font:inherit; font-weight:750; cursor:pointer; }
+    button:hover { filter:brightness(1.08); } button:disabled { opacity:.6; cursor:wait; }
+    .run-row { display:flex; gap:1rem; align-items:center; margin-top:1rem; }
+    .status { color:var(--muted); } .error { color:var(--red); }
+    [hidden] { display:none !important; }
+    .result-head { display:flex; flex-wrap:wrap; justify-content:space-between; gap:.7rem; align-items:flex-start; }
+    .badge { display:inline-flex; align-items:center; padding:.3rem .6rem; border-radius:99px; background:#24313a; color:#e6edf0; font-size:.8rem; font-weight:700; }
+    .badge.grade { color:#ffe0a6; background:#392f20; }
+    .candidate { font-size:1.3rem; font-weight:750; overflow-wrap:anywhere; }
+    .result-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.7rem; margin:1rem 0; }
+    .stat { border:1px solid var(--line); background:#0d1a20; padding:.8rem; border-radius:8px; min-width:0; }
+    .stat small { display:block; color:var(--muted); text-transform:uppercase; letter-spacing:.07em; font-size:.69rem; }
+    .stat strong { display:block; margin-top:.3rem; overflow-wrap:anywhere; }
+    .bar-row { display:grid; grid-template-columns:minmax(120px,1fr) 3fr 3rem; gap:.7rem; align-items:center; font-size:.85rem; margin:.45rem 0; }
+    .bar-label { overflow-wrap:anywhere; }
+    .bar { height:9px; border-radius:20px; background:#25353d; overflow:hidden; }
+    .bar i { display:block; height:100%; background:var(--blue); border-radius:inherit; }
+    .actions { display:flex; flex-wrap:wrap; gap:.4rem; margin:1rem 0; }
+    .actions a { border:1px solid #3a6574; border-radius:6px; color:var(--blue); padding:.5rem .7rem; text-decoration:none; font-size:.86rem; }
+    .evidence-list { margin-top:.45rem; color:var(--muted); font-size:.82rem; overflow-wrap:anywhere; }
+    .evidence-list p { margin:.3rem 0; }
+    .review-history { margin-top:1rem; padding-top:.8rem; border-top:1px solid var(--line); }
+    .analysis-map { width:100%; height:auto; min-height:240px; display:block; margin-top:.5rem; border:1px solid var(--line); border-radius:8px; background:#0a2029; }
+    .map-legend { display:flex; flex-wrap:wrap; gap:.45rem 1rem; margin-top:.65rem; color:var(--muted); font-size:.8rem; }
+    .map-legend span::before { content:""; display:inline-block; width:.7rem; height:.7rem; margin-right:.35rem; border-radius:50%; background:var(--map-color); vertical-align:-.05rem; }
+    label.field { display:block; color:var(--muted); font-size:.87rem; margin:.7rem 0; }
+    input[type=text], textarea, select { display:block; width:100%; margin-top:.25rem; padding:.65rem; border:1px solid #38515b; border-radius:6px; color:#eaf1f3; background:#0b171d; font:inherit; }
+    textarea { min-height:75px; resize:vertical; }
+    .review-row { display:grid; grid-template-columns:1fr 1fr; gap:.8rem; }
+    details { margin-top:1rem; color:var(--muted); }
+    pre { white-space:pre-wrap; overflow-wrap:anywhere; max-height:360px; overflow:auto; background:#091318; border:1px solid var(--line); border-radius:7px; padding:.8rem; font-size:.76rem; color:#c8d7dd; }
+    footer { color:var(--muted); font-size:.8rem; padding:1rem 0; }
+    @media(max-width:620px) { header { padding:.8rem 1rem; } main { width:calc(100% - 1.25rem); margin:1.25rem auto 3rem; } .scenario-grid,.sources,.result-grid,.review-row { grid-template-columns:1fr; } .bar-row { grid-template-columns:100px 1fr 2.8rem; gap:.4rem; } .run-row { align-items:flex-start; flex-direction:column; } }
+  </style>
+</head>
+<body>
+  <header><div class="brand">SAGAR-SAKSHI</div><a href="/frontend/mockups.html">View UI mockup previews</a></header>
+  <main>
+    <div class="eyebrow">Prototype · analyst-assisted</div>
+    <h1>Run an incident analysis</h1>
+    <p class="intro">Choose one of the two demonstration incidents. The pipeline produces a ranked prototype result and an evidence bundle for review. It does not establish legal attribution.</p>
+
+    <section class="panel" aria-labelledby="choose-title">
+      <h2 id="choose-title">1. Choose an incident</h2>
+      <form id="runForm">
+        <div class="scenario-grid">
+          <label class="scenario"><input type="radio" name="scenario" value="config/ennore_2017.yaml"><strong>Ennore · 2017</strong><span>Collision-related spill near Kamarajar Port, Tamil Nadu</span></label>
+          <label class="scenario"><input type="radio" name="scenario" value="config/kerala_2025.yaml" checked><strong>Kerala · 2025</strong><span>MSC ELSA 3 incident off the Alappuzha coast</span></label>
+        </div>
+        <h3 style="margin-top:1rem">What this demo uses</h3>
+        <div class="sources" aria-label="Prototype data sources">
+          <div class="source"><b>SAR imagery</b><span>Scene catalog metadata; generated demo raster when the full scene file is absent</span></div>
+          <div class="source"><b>AIS positions</b><span>Synthetic demonstration tracks, not live or historical AIS records</span></div>
+          <div class="source"><b>Wind and currents</b><span>Configured constant values, not downloaded metocean observations</span></div>
+          <div class="source"><b>Attribution</b><span>Uncalibrated ranking weights; analyst review required</span></div>
+        </div>
+        <div class="notice">Prototype inputs can create plausible-looking results. Treat the ranked vessel as a demo hypothesis, not a verified source.</div>
+        <div class="run-row"><button id="runButton" type="submit">Run analysis</button><span id="runStatus" class="status" role="status" aria-live="polite"></span></div>
+      </form>
+    </section>
+
+    <section id="result" class="panel" hidden aria-live="polite">
+      <div class="eyebrow">2. Review the result</div>
+      <div class="result-head"><div><div id="headline" class="candidate"></div><div id="incidentName" class="status"></div></div><span id="grade" class="badge grade"></span></div>
+      <p id="gradeExplanation" class="status"></p>
+      <div class="result-grid">
+        <div class="stat"><small>Run ID</small><strong id="runId"></strong></div>
+        <div class="stat"><small>AIS input</small><strong id="aisStatus"></strong></div>
+        <div class="stat"><small>SAR input</small><strong id="sarStatus"></strong></div>
+      </div>
+      <div class="result-grid">
+        <div class="stat"><small>Incident / location</small><strong id="incidentContext"></strong></div>
+        <div class="stat"><small>SAR scene / acquired</small><strong id="sceneContext"></strong></div>
+        <div class="stat"><small>Wind / current</small><strong id="forcingContext"></strong></div>
+      </div>
+      <div id="resultWarning" class="notice"></div>
+      <div class="panel" style="margin:1rem 0 0;padding:.9rem">
+        <h3>Run map</h3>
+        <p class="status">Features are drawn from this run's GeoJSON outputs. No map tiles or outside imagery are shown.</p>
+        <svg id="analysisMap" class="analysis-map" viewBox="0 0 1000 560" role="img" aria-label="Map of the selected analysis run"></svg>
+        <div class="map-legend" aria-label="Map legend">
+          <span style="--map-color:#ff806f">Slick candidate</span><span style="--map-color:#f4c878">Hindcast region</span>
+          <span style="--map-color:#79d4b0">AIS track (synthetic)</span><span style="--map-color:#f5f7f8">SAR target</span>
+        </div>
+        <p id="mapStatus" class="status" role="status" aria-live="polite">Waiting for a completed run.</p>
+      </div>
+      <h3>Ranked hypotheses</h3>
+      <p class="status">Relative ranking score, not a probability. Bars compare each listed score to the highest listed score.</p>
+      <div id="ranking"></div>
+      <div class="result-grid">
+        <div class="stat"><small>Evidence terms for top hypothesis</small><div id="evidenceTerms" class="evidence-list"></div></div>
+        <div class="stat"><small>Excluded candidates</small><div id="exclusions" class="evidence-list"></div></div>
+        <div class="stat"><small>Scene product status</small><strong id="productStatus"></strong></div>
+      </div>
+      <div class="actions" id="artifactLinks"></div>
+      <details><summary>Show full evidence card</summary><pre id="cardJson"></pre></details>
+
+      <hr style="border:0;border-top:1px solid var(--line);margin:1.2rem 0">
+      <div class="eyebrow">3. Record analyst review</div>
+      <p class="status">Your decision is saved to the audit log. An alert is only simulated for accepted Grade A or B results.</p>
+      <form id="reviewForm">
+        <div class="review-row">
+          <label class="field">Reviewer ID<input id="reviewerId" type="text" required value="demo-analyst" autocomplete="off"></label>
+          <label class="field">Decision<select id="decision"><option value="inconclusive">Inconclusive</option><option value="accept">Accept this lead</option><option value="reject">Reject this lead</option></select></label>
+        </div>
+        <label class="field">Review notes<textarea id="notes" placeholder="Add a short reason for your decision"></textarea></label>
+        <div class="run-row"><button id="reviewButton" type="submit">Save review</button><span id="reviewStatus" class="status" role="status" aria-live="polite"></span></div>
+      </form>
+      <div class="review-history"><h3>Saved review history</h3><div id="reviewHistory" class="status" aria-live="polite">No reviews loaded.</div></div>
+    </section>
+    <footer>Demonstration only · synthetic AIS and demo SAR inputs are clearly identified in each result.</footer>
+  </main>
+  <script>
+    let currentCard = null;
+    const $ = (id) => document.getElementById(id);
+    const runForm = $('runForm');
+    runForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const selected = document.querySelector('input[name="scenario"]:checked');
+      if (!selected) return;
+      const button = $('runButton');
+      button.disabled = true;
+      $('result').hidden = true;
+      $('runStatus').className = 'status';
+      $('runStatus').textContent = 'Running the selected pipeline… this can take up to a minute.';
+      try {
+        const response = await fetch('/runs', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({config_path:selected.value})});
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.detail || `Request failed (${response.status})`);
+        currentCard = data;
+        try { localStorage.setItem('sagarSakshiLastRunId', data.run_id); } catch (_) { /* Keep the completed run usable if storage is disabled. */ }
+        renderResult(data);
+        await loadRunMap(data.run_id);
+        await loadReviewHistory(data.run_id);
+        $('runStatus').textContent = 'Analysis complete.';
+        $('result').hidden = false;
+        $('result').scrollIntoView({behavior:'smooth',block:'start'});
+      } catch (error) {
+        $('runStatus').className = 'status error';
+        $('runStatus').textContent = error.message || 'Could not complete the analysis.';
+      } finally { button.disabled = false; }
+    });
+
+    function renderResult(card) {
+      const attr = card.attribution || {};
+      const meta = card.metadata || {};
+      const ranked = Object.entries(attr.posteriors || {}).filter(([name]) => name !== 'U').sort((a,b) => b[1]-a[1]);
+      const topName = ranked[0]?.[0];
+      $('headline').textContent = attr.headline || 'No system headline available';
+      $('incidentName').textContent = meta.incident_name || meta.incident_id || 'Incident';
+      $('grade').textContent = `Evidence grade ${attr.grade || 'None'}`;
+      const gradeDescriptions = {
+        A: 'Strong evidence lead under the prototype rules. This is still an unvalidated result and requires analyst review.',
+        B: 'Evidence supports a lead under the prototype rules. This is still an unvalidated result and requires analyst review.',
+        C: 'Vessels in the area only. The system does not name a vessel in its headline at this grade.',
+        None: 'Insufficient evidence. The system abstains from making a vessel attribution.'
+      };
+      $('gradeExplanation').textContent = gradeDescriptions[attr.grade] || 'Prototype grade; analyst review required.';
+      $('runId').textContent = card.run_id;
+      $('aisStatus').textContent = `${card.ais_status || 'unknown'}${card.ais_status === 'synthetic' ? ' demo tracks' : ''}`;
+      $('sarStatus').textContent = meta.sar_synthetic ? `Generated demo raster (${meta.sar_source || 'synthetic input'})` : (meta.sar_source || 'not reported');
+      $('incidentContext').textContent = [meta.incident_location, meta.incident_time_utc].filter(Boolean).join(' · ') || meta.incident_id || 'Not reported';
+      $('sceneContext').textContent = [meta.satellite, meta.scene_id, meta.scene_acquisition_start_utc].filter(Boolean).join(' · ') || 'Not reported';
+      const pretty = (value) => String(value || '').replaceAll('_',' ').replaceAll('-',' ');
+      $('forcingContext').textContent = `${pretty(meta.wind_source) || 'wind source unknown'} (${meta.wind_speed_mps ?? '?'} m/s); ${pretty(meta.current_source) || 'current source unknown'}`;
+      $('productStatus').textContent = pretty(meta.scene_product_status) || 'Not reported';
+      $('resultWarning').textContent = `Prototype ranking only. ${meta.probabilities_calibrated === false ? 'Scores are not calibrated probabilities. ' : ''}${meta.forcing_live_fetch === false ? 'Wind and current inputs are configured constants. ' : ''}A high score does not establish responsibility or prove a spill source.`;
+      const ranking = $('ranking'); ranking.replaceChildren();
+      const rows = [...ranked, ...(attr.posteriors?.U == null ? [] : [['Unknown / unassigned', attr.posteriors.U]])];
+      const maxScore = Math.max(0, ...rows.map(([,value]) => Number(value) || 0));
+      for (const [name, value] of rows) {
+        const row = document.createElement('div'); row.className = 'bar-row';
+        const label = document.createElement('span'); label.className = 'bar-label'; label.textContent = name;
+        const bar = document.createElement('span'); bar.className = 'bar'; const fill = document.createElement('i'); fill.style.width = `${maxScore ? Math.max(0,Math.min(100,(value/maxScore)*100)) : 0}%`; bar.append(fill);
+        const score = document.createElement('strong'); score.textContent = Number(value).toFixed(4);
+        row.append(label,bar,score); ranking.append(row);
+      }
+      const evidenceTerms = $('evidenceTerms'); evidenceTerms.replaceChildren();
+      const terms = (topName && attr.evidence_terms?.[topName]) || {};
+      const termNames = {drift_consistency:'Drift consistency',slick_geometry:'Slick geometry',head_proximity:'Head proximity',behaviour:'Vessel behaviour'};
+      for (const [key,value] of Object.entries(terms)) {
+        const p = document.createElement('p'); p.textContent = `${termNames[key] || key.replaceAll('_',' ')}: ${Number(value).toFixed(3)}`; evidenceTerms.append(p);
+      }
+      if (!Object.keys(terms).length) evidenceTerms.textContent = 'No evidence terms recorded.';
+      const exclusions = $('exclusions'); exclusions.replaceChildren();
+      for (const item of (attr.exclusions || [])) {
+        const p = document.createElement('p'); p.textContent = `${item.vessel_id || item.candidate || 'Candidate'}: ${item.reason || 'No reason recorded'}`; exclusions.append(p);
+      }
+      if (!(attr.exclusions || []).length) exclusions.textContent = 'No exclusions recorded.';
+      const id = encodeURIComponent(card.run_id);
+      const links = $('artifactLinks'); links.replaceChildren();
+      for (const [label,url] of [['Evidence PDF',`/runs/${id}/card?format=pdf`],['Evidence JSON',`/runs/${id}/card?format=json`],['Provenance manifest',`/runs/${id}/manifest`]]) {
+        const a=document.createElement('a'); a.href=url; a.target='_blank'; a.rel='noopener'; a.textContent=label; links.append(a);
+      }
+      $('cardJson').textContent = JSON.stringify(card,null,2);
+      $('reviewStatus').textContent = '';
+    }
+
+    async function loadRunMap(runId) {
+      const svg = $('analysisMap');
+      const status = $('mapStatus');
+      svg.replaceChildren();
+      status.textContent = 'Loading layers from this run…';
+      const ns = 'http://www.w3.org/2000/svg';
+      const make = (tag, attrs = {}) => {
+        const el = document.createElementNS(ns, tag);
+        for (const [key,value] of Object.entries(attrs)) el.setAttribute(key, value);
+        return el;
+      };
+      try {
+        const names = ['back_region','tracks','slicks','ships'];
+        const collections = await Promise.all(names.map(async name => {
+          const response = await fetch(`/layers/${name}?run_id=${encodeURIComponent(runId)}`);
+          const data = await response.json();
+          if (!response.ok) throw new Error(data.detail || `Could not load ${name}`);
+          return [name,data.features || []];
+        }));
+        const layers = Object.fromEntries(collections);
+        const coordinatePairs = [];
+        function visit(value) {
+          if (!Array.isArray(value)) return;
+          if (value.length >= 2 && Number.isFinite(Number(value[0])) && Number.isFinite(Number(value[1]))) coordinatePairs.push([Number(value[0]),Number(value[1])]);
+          else value.forEach(visit);
+        }
+        for (const features of Object.values(layers)) for (const feature of features) visit(feature.geometry?.coordinates);
+        if (!coordinatePairs.length) { status.textContent = 'This run did not produce map features.'; return; }
+        let minX=Math.min(...coordinatePairs.map(p=>p[0])), maxX=Math.max(...coordinatePairs.map(p=>p[0]));
+        let minY=Math.min(...coordinatePairs.map(p=>p[1])), maxY=Math.max(...coordinatePairs.map(p=>p[1]));
+        if (maxX-minX < 1e-7) { minX-=.01; maxX+=.01; } if (maxY-minY < 1e-7) { minY-=.01; maxY+=.01; }
+        const pad=34, width=1000, height=560;
+        const point = ([x,y]) => [pad+(x-minX)/(maxX-minX)*(width-2*pad), height-pad-(y-minY)/(maxY-minY)*(height-2*pad)];
+        svg.append(make('rect',{x:0,y:0,width,height,fill:'#0a2029'}));
+        const grid=make('g',{stroke:'#20404a','stroke-width':'1'});
+        for(let i=1;i<5;i++){ const x=pad+i*(width-2*pad)/5; grid.append(make('line',{x1:x,y1:pad,x2:x,y2:height-pad})); }
+        for(let i=1;i<4;i++){ const y=pad+i*(height-2*pad)/4; grid.append(make('line',{x1:pad,y1:y,x2:width-pad,y2:y})); }
+        svg.append(grid);
+        const drawPath=(geometry,style)=>{
+          const paths=[];
+          const line=(coords,close=false)=>{ if(!coords?.length)return; const xy=coords.map(point); paths.push(`M ${xy.map(p=>p.join(' ')).join(' L ')}${close?' Z':''}`); };
+          if(geometry?.type==='Polygon') geometry.coordinates.forEach(ring=>line(ring,true));
+          else if(geometry?.type==='MultiPolygon') geometry.coordinates.forEach(poly=>poly.forEach(ring=>line(ring,true)));
+          else if(geometry?.type==='LineString') line(geometry.coordinates);
+          if(paths.length) svg.append(make('path',{d:paths.join(' '),...style}));
+        };
+        for(const feature of layers.back_region || []) drawPath(feature.geometry,{fill:'#f4c87822',stroke:'#f4c878','stroke-width':'2','stroke-dasharray':'8 6','fill-rule':'evenodd'});
+        for(const feature of layers.tracks || []) drawPath(feature.geometry,{fill:'none',stroke:'#79d4b0','stroke-width':'2','stroke-opacity':'.8'});
+        for(const feature of layers.slicks || []) drawPath(feature.geometry,{fill:'#ff806f55',stroke:'#ff806f','stroke-width':'2','fill-rule':'evenodd'});
+        for(const feature of layers.ships || []) {
+          const xy=point(feature.geometry.coordinates); svg.append(make('circle',{cx:xy[0],cy:xy[1],r:5,fill:'#f5f7f8',stroke:'#26343b','stroke-width':'2'}));
+        }
+        const trackStatus = layers.tracks.some(feature => feature.properties?.data_status === 'source_csv_unverified') ? 'AIS CSV rows (source unverified)' : 'synthetic AIS';
+        status.textContent=`${layers.slicks.length} slick candidate(s), ${layers.ships.length} SAR target(s), ${layers.tracks.length} AIS track(s), ${layers.back_region.length} hindcast region(s). Track input: ${trackStatus}.`;
+      } catch(error) { status.textContent=`Run map unavailable: ${error.message}`; }
+    }
+
+    async function loadReviewHistory(runId) {
+      const target = $('reviewHistory'); target.textContent = 'Loading saved reviews…';
+      try {
+        const response = await fetch(`/runs/${encodeURIComponent(runId)}/reviews`);
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.detail || `Request failed (${response.status})`);
+        target.replaceChildren();
+        const reviews = data.reviews || [];
+        if (!reviews.length) { target.textContent = 'No reviews saved for this run yet.'; return; }
+        for (const item of reviews) {
+          const p = document.createElement('p');
+          p.textContent = `${item.timestamp_utc} · ${item.reviewer_id}: ${item.decision}${item.notes ? ` — ${item.notes}` : ''}`;
+          target.append(p);
+        }
+      } catch (error) { target.textContent = `Review history unavailable: ${error.message}`; }
+    }
+
+    $('reviewForm').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!currentCard) return;
+      if (!$('reviewerId').value.trim()) { $('reviewStatus').className = 'status error'; $('reviewStatus').textContent = 'Enter a reviewer ID.'; return; }
+      const button = $('reviewButton'); button.disabled = true;
+      $('reviewStatus').className = 'status'; $('reviewStatus').textContent = 'Saving review…';
+      try {
+        const response = await fetch(`/runs/${encodeURIComponent(currentCard.run_id)}/review`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({reviewer_id:$('reviewerId').value.trim(),decision:$('decision').value,notes:$('notes').value.trim() || null})});
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.detail || `Request failed (${response.status})`);
+        const review = data.review_entry;
+        $('reviewStatus').textContent = data.alert?.status === 'suppressed' ? `Review ${review?.review_id ?? ''} saved. Alert suppressed: ${data.alert.reason}` : `Review ${review?.review_id ?? ''} saved. Alert: ${data.alert?.status || 'none'}.`;
+        await loadReviewHistory(currentCard.run_id);
+      } catch (error) {
+        $('reviewStatus').className = 'status error'; $('reviewStatus').textContent = error.message || 'Could not save the review.';
+      } finally { button.disabled = false; }
+    });
+
+    (async function restoreLastRun() {
+      let runId;
+      try { runId = localStorage.getItem('sagarSakshiLastRunId'); } catch (_) { return; }
+      if (!runId) return;
+      try {
+        const response = await fetch(`/runs/${encodeURIComponent(runId)}/card?format=json`);
+        if (!response.ok) { localStorage.removeItem('sagarSakshiLastRunId'); return; }
+        const card = await response.json();
+        currentCard = card;
+        const scenarioValue = (card.metadata?.incident_id || '').startsWith('ennore_') ? 'config/ennore_2017.yaml' : 'config/kerala_2025.yaml';
+        for (const option of document.querySelectorAll('input[name="scenario"]')) option.checked = option.value === scenarioValue;
+        renderResult(card);
+        $('result').hidden = false;
+        $('runStatus').textContent = `Restored previous run ${card.run_id}.`;
+        await loadReviewHistory(card.run_id);
+      } catch (_) { try { localStorage.removeItem('sagarSakshiLastRunId'); } catch (__) {} }
+    })();
+  </script>
+</body>
+</html>
