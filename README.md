@@ -129,7 +129,7 @@ After downloading, place the files in:
 
 ```text
 data/02_processed_tiff/
-
+```
 ---
 
 ## 5. Quickstart: Running the Pipeline & Frontend
