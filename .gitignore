@@ -8,6 +8,3 @@ __pycache__/
 
 *.log
 
-data/
-*.zip
-*.SAFE/
