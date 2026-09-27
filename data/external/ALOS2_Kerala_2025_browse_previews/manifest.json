@@ -1,0 +1,38 @@
+{
+  "source_page": "https://sentinel-asia.org/EO/2025/article20250525IN.html",
+  "acquisition_date": "2025-05-28",
+  "product_family": "ALOS-2 PALSAR-2 Level 2.1 FBD, right-looking, GUD browse previews; Sentinel Asia page lists IMG HH products",
+  "polarimetry_note": "FBD is dual polarization, not quad polarization; the downloaded files are *_sml.jpg browse previews only.",
+  "files": [
+    {
+      "file": "IMG-HH-ALOS2594703420-250528-FBDR2.1GUD_sml.jpg",
+      "bytes": 494882,
+      "sha256": "534dab2749268cbc4ac3980878b50182c6ce322fbd9c4002de411e84500ac524",
+      "data_type": "Sentinel Asia browse JPEG (not full-resolution SAR)"
+    },
+    {
+      "file": "IMG-HH-ALOS2594703430-250528-FBDR2.1GUD_sml.jpg",
+      "bytes": 504778,
+      "sha256": "40b1d02a6097378d08bf0c12faf00ab1fb2b89ae8a72767aa4583718e4074012",
+      "data_type": "Sentinel Asia browse JPEG (not full-resolution SAR)"
+    },
+    {
+      "file": "IMG-HH-ALOS2594703440-250528-FBDR2.1GUD_sml.jpg",
+      "bytes": 386017,
+      "sha256": "3ec2cb9110b00407a12083101084f7a40e9b57df309db77816129e4f4be3468a",
+      "data_type": "Sentinel Asia browse JPEG (not full-resolution SAR)"
+    },
+    {
+      "file": "IMG-HH-ALOS2594703450-250528-FBDR2.1GUD_sml.jpg",
+      "bytes": 152104,
+      "sha256": "f32665eff87947d3695c6f5f3b94ccf74a1e6a351a635a82b61dae104bf8103b",
+      "data_type": "Sentinel Asia browse JPEG (not full-resolution SAR)"
+    },
+    {
+      "file": "IMG-HH-ALOS2594703460-250528-FBDR2.1GUD_sml.jpg",
+      "bytes": 634733,
+      "sha256": "8a7aec8f31e06a9d7ef0f8d3d1e400b7241ae6ac68261f242478f04ba8e74ad9",
+      "data_type": "Sentinel Asia browse JPEG (not full-resolution SAR)"
+    }
+  ]
+}

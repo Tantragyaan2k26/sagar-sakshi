@@ -1,0 +1,126 @@
+[
+  {
+    "case": "ennore_2017",
+    "id": "1d00379c-fe75-4e44-a90d-d354a59e0104",
+    "name": "S1A_IW_GRDH_1SDV_20170129T003132_20170129T003157_015039_01892E_8B05_COG.SAFE",
+    "catalogue_metadata": {
+      "@odata.mediaContentType": "application/octet-stream",
+      "Id": "1d00379c-fe75-4e44-a90d-d354a59e0104",
+      "Name": "S1A_IW_GRDH_1SDV_20170129T003132_20170129T003157_015039_01892E_8B05_COG.SAFE",
+      "ContentDate": {
+        "Start": "2017-01-29T00:31:32.651000Z",
+        "End": "2017-01-29T00:31:57.648000Z"
+      },
+      "GeoFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.499916,
+              11.888502
+            ],
+            [
+              78.219948,
+              12.333139
+            ],
+            [
+              78.516136,
+              13.841207
+            ],
+            [
+              80.810555,
+              13.400343
+            ],
+            [
+              80.499916,
+              11.888502
+            ]
+          ]
+        ]
+      }
+    },
+    "download_url": "https://download.dataspace.copernicus.eu/odata/v1/Products(1d00379c-fe75-4e44-a90d-d354a59e0104)/$value",
+    "access_status": "catalogue metadata public; product download endpoint requires Copernicus Data Space authentication",
+    "catalogue_checked_utc": "2026-09-26",
+    "search_aoi_wgs84": [
+      80.15,
+      13.05,
+      80.52,
+      13.45
+    ],
+    "candidate_note": "Catalogue footprint covers the configured approximate Ennore AOI; the full SAFE product is not downloaded."
+  },
+  {
+    "case": "kerala_2025",
+    "id": "6159aa50-fd13-4ef8-8027-6de20caeda34",
+    "name": "S1A_IW_GRDH_1SDV_20250528T004112_20250528T004137_059387_075F14_7F15_COG.SAFE",
+    "catalogue_metadata": {
+      "@odata.context": "$metadata#Products/$entity",
+      "@odata.mediaContentType": "application/octet-stream",
+      "Id": "6159aa50-fd13-4ef8-8027-6de20caeda34",
+      "Name": "S1A_IW_GRDH_1SDV_20250528T004112_20250528T004137_059387_075F14_7F15_COG.SAFE",
+      "ContentType": "application/octet-stream",
+      "ContentLength": 1210827746,
+      "OriginDate": "2025-05-28T00:46:05.501774Z",
+      "PublicationDate": "2025-05-28T02:49:47.925236Z",
+      "ModificationDate": "2026-09-04T03:29:41.194236Z",
+      "Online": true,
+      "EvictionDate": "9999-12-31T23:59:59.999999Z",
+      "S3Path": "/eodata/Sentinel-1/SAR/IW_GRDH_1S-COG/2025/05/28/S1A_IW_GRDH_1SDV_20250528T004112_20250528T004137_059387_075F14_7F15_COG.SAFE",
+      "Checksum": [
+        {
+          "Value": "e0d2b1f9775ccab1938e79efaf482057",
+          "Algorithm": "MD5",
+          "ChecksumDate": "2026-09-04T03:29:37.865509Z"
+        },
+        {
+          "Value": "91ee4fa5c25d4bddee7cbc059a28ca233ddb394ac831d9c3a4f6a73a4c4b6e84",
+          "Algorithm": "BLAKE3",
+          "ChecksumDate": "2026-09-04T03:29:39.949530Z"
+        }
+      ],
+      "ContentDate": {
+        "Start": "2025-05-28T00:41:12.668533Z",
+        "End": "2025-05-28T00:41:37.668461Z"
+      },
+      "Footprint": "geography'SRID=4326;POLYGON ((77.794785 8.745656, 78.098289 10.259345, 75.809715 10.712229, 75.517128 9.20263, 77.794785 8.745656))'",
+      "GeoFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.794785,
+              8.745656
+            ],
+            [
+              78.098289,
+              10.259345
+            ],
+            [
+              75.809715,
+              10.712229
+            ],
+            [
+              75.517128,
+              9.20263
+            ],
+            [
+              77.794785,
+              8.745656
+            ]
+          ]
+        ]
+      }
+    },
+    "download_url": "https://download.dataspace.copernicus.eu/odata/v1/Products(6159aa50-fd13-4ef8-8027-6de20caeda34)/$value",
+    "access_status": "catalogue metadata public; product download endpoint requires Copernicus Data Space authentication",
+    "catalogue_checked_utc": "2026-09-26",
+    "search_aoi_wgs84": [
+      76.05,
+      9.15,
+      76.35,
+      9.45
+    ],
+    "candidate_note": "Catalogue footprint covers the configured approximate Kerala AOI; the full SAFE product is not downloaded."
+  }
+]

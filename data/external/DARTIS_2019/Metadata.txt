@@ -1,0 +1,37 @@
+Event
+	Location: 	Eastern Mediterranean Sea 
+	Data Coverage:	
+		West-bound Longitude:	27.1212703
+		North-bound Latitude:		36.3715771
+		East-bound Longitude:	36.0881997
+		South-bound Latitude:	29.2991798
+
+PI:
+Yi-Jie Yang 
++49 421 24420-1047
+yi-jie.yang@dlr.de
+https://orcid.org/0000-0002-4098-8119
+German Aerospace Center (DLR)
+
+Authors: 
+	Yi-Jie Yang		German Aerospace Center (DLR), Germany; Kiel University, Germany 
+	Suman Singha		Danish Meteorological Institute (DMI), Denmark; German Aerospace Center (DLR), Germany
+
+Dataset Title: Oil Slicks, Look-Alikes and Other Remarkable SAR Signatures in Sentinel-1 Imagery in the Eastern Mediterranean Sea in 2019
+
+References:
+1. Y.-J. Yang, S. Singha, R. Goldman, and F. Schütte, "Dataset of Oil Slicks, Look-Alikes and Remarkable SAR Signatures Obtained from Sentinel-1 Data in the Eastern Mediterranean Sea" --> a data descriptor explaining this dataset
+2. Y.-J. Yang, S. Singha, and R. Goldman, "A Near Real-Time Automated Oil Spill Detection and Early Warning System using Sentinel-1 SAR imagery for the Southeastern Mediterranean Sea," International Journal of Remote Sensing, 45(6), 2024. https://doi.org/10.1080/01431161.2024.2321468
+
+Abstract: 
+Spaceborne synthetic aperture radar (SAR) has been applied to detect oil slicks. Previous studies applied machine learning and deep learning techniques to automate oil slick detection. However, a large amount of data is generally required to train such a model. It highlights the importance and necessity of a publicly available oil slick dataset. This dataset provides annotations of oil slicks located in longitude from 30°E to 36°E and in latitude from 31°N to 34.7°N in the Eastern Mediterranean Sea, observed from Sentinel-1 spaceborne synthetic aperture radar (SAR) in 2019. The annotation and inspection of the oil slicks were initially done in the framework of a previous study by the authors (doi: 10.1080/01431161.2024.2321468). On top of that, images with oceanic and other phenomena, which can also manifest similar SAR signatures and are considered "look-alikes", are also included in the dataset as a no-oil set.
+A well-developed oil spill detection system should be able to not only detect oil spills but also avoid the detection of these look-alikes. These look-alikes were collected on a larger extent, ranging between 27.1212703°E and 36.0881997°E in longitudes and 29.2991798°N and 36.3715771°N in latitudes. There are, in total, 1365 image patches with 3225 oil objects in the oil set and 2290 image patches in the no-oil set.
+
+Keywords: oil slick; look-alikes; synthetic aperture radar; Sentinel-1; Eastern Mediterranean Sea
+
+Project: 
+	The dataset generation was partly funded by the DARTIS project, supported by the German Federal Ministry of Education and Research under grant number 03F0823B.
+	DARTIS: Development of an Automated Real-Time Intelligent Information System for Early Warning and Preparedness of Offshore Oil and Gas Operations off the Coast of Israel – SAR Remote Sensing
+	Project website:
+	- https://www.dlr.de/en/eoc/research-transfer/projects-missions/dartis
+	- https://isramar.ocean.org.il/isramar2009/DARTIS/
