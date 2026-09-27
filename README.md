@@ -119,6 +119,22 @@ sagar-sakshi/
 
 ---
 
+<<<<<<< HEAD
+=======
+## 4. Dataset
+
+The large processed Sentinel-1 datasets are hosted externally because they exceed GitHub's individual file-size limits.
+
+**[Download the processed Sentinel-1 datasets from Google Drive](https://drive.google.com/drive/folders/1qpOxIK0RiqSlxt6L7Uz62RiSwZVAL46x?usp=sharing)**
+
+After downloading, place the files in:
+
+```text
+data/02_processed_tiff/
+```
+---
+
+>>>>>>> 70bc6b8 (Update dataset download instructions)
 ## 5. Quickstart: Running the Pipeline & Frontend
 
 ### 1. Install Dependencies
