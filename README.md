@@ -119,7 +119,7 @@ sagar-sakshi/
 
 ---
 
-<<<<<<< HEAD
+
 =======
 ## 4. Dataset
 
@@ -134,7 +134,7 @@ data/02_processed_tiff/
 ```
 ---
 
->>>>>>> 70bc6b8 (Update dataset download instructions)
+
 ## 5. Quickstart: Running the Pipeline & Frontend
 
 ### 1. Install Dependencies
